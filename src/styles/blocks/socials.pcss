@@ -1,0 +1,27 @@
+.socials {
+    display: flex;
+
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        fill: #534d5d;
+
+        &:hover {
+            fill: #fff;
+            transform: scale(1.1);
+            transition: fill .3s;
+        }
+    }
+}

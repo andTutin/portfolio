@@ -1,0 +1,37 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Portfolio | main page
+  body
+    .wrapper
+      section.hero.fullscreen-section#main
+        .container.hero__container
+          header.header
+            .logo ТА
+            nav.header__menu.menu
+              ul.menu__list
+                -var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
+                each item in menuItems
+                  li.menu__item
+                    a(href="#"+`${item.id}`).menu__link= item.text
+            address.header__socials.socials
+              ul.socials__list
+                - var socialsItems = [{"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"}, {"icon": 'vk', 'link': "https://vk.com/and.tutin"}, {"icon": "github", 'link': "https://github.com/andTutin"}]
+                each item in socialsItems
+                  li.socials__item
+                    a(href=item.link).socials__link
+                      +icon(item.icon, "socials__icon")
+          .hero__content.developer-info
+            .developer-info__desc Личный сайт веб разработчика 
+            .developer-info__name Андрей Тутин
+          .hero__btns.scrolldown-btn
+              a(href="#about-me").scrolldown-btn__link Скролл
+                +icon("scroll", "scrolldown-btn__icon")
+      
+      section.about-me#about-me
+        .container.about-me__container

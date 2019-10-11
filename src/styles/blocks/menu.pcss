@@ -1,0 +1,35 @@
+.menu {
+    display: flex;
+
+    &__list {
+        width : 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        
+        &:after {
+            position: absolute;
+            content: "";
+            top: 105%;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+
+        &:hover:after {
+            width: 100%;
+            transition: .3s;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
