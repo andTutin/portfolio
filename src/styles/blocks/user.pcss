@@ -1,0 +1,26 @@
+.user {
+    width: 100%;
+    height: 100%;
+    @include grid-v(3, 30px);
+    grid-template-rows: 200px 70px 1fr;
+
+    &__avatar {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__info {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+
+    &__info-item {
+        @include grid-v(2, 0px);
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}

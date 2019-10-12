@@ -21,9 +21,13 @@
             transform: translateX(-50%);
         }
 
-        &:hover:after {
-            width: 100%;
-            transition: .3s;
+        &:hover {
+            transform: scale(1.1);
+
+            &:after {
+                width: 100%;
+                transition: .3s;
+            }
         }
     }
 

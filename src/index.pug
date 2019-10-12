@@ -9,10 +9,10 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      section.hero.fullscreen-section#main
+      section.hero#main
         .container.hero__container
           header.header
-            .logo ТА
+            .logo АТ
             nav.header__menu.menu
               ul.menu__list
                 -var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
@@ -27,11 +27,38 @@ html(lang="en")
                     a(href=item.link).socials__link
                       +icon(item.icon, "socials__icon")
           .hero__content.developer-info
-            .developer-info__desc Личный сайт веб разработчика 
+            .developer-info__desc Личный сайт<br>веб разработчика 
             .developer-info__name Андрей Тутин
           .hero__btns.scrolldown-btn
-              a(href="#about-me").scrolldown-btn__link Скролл
-                +icon("scroll", "scrolldown-btn__icon")
+            a(href="#about-me").scrolldown-btn__link Скролл
+              +icon("scroll", "scrolldown-btn__icon")
       
-      section.about-me#about-me
-        .container.about-me__container
+        section.about-me#about-me
+          .container.about-me__container
+            .about-me__left
+              .user
+                .avatar.user__avatar
+                  +image("content/user.jpg", "avatar__pic")
+                ul.user__info
+                  - var infoItems = [['Проживаю:', 'Санкт-Петербург'],['Возраст:', '32'],['Родился:', 'Гатчина']]
+                  each item in infoItems
+                    li.user__info-item
+                      .user__key #{item[0]}
+                      .user__value #{item[1]}
+            .about-me__right
+              h4.about-me__hello Привет, меня зовут
+              h3.about-me__title Андрей Тутин
+              .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .triangles
+              svg.triangles__item-left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(points="0,0 0,100 1000,100")
+              svg.triangles__item-right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(points="0,100 1000,100 1000,0")
+
+      section.skills#skills
+        .container.skills__container
+          .skills__content
+            h2.skills__title Чем я могу быть полезен вам
+            .skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .skills__values

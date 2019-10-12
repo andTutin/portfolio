@@ -1,15 +1,19 @@
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    @include grid-v(12, 30px);
+    align-items: center;
 
   &__menu {
-    width: 690px;
+    grid-column: 3 / 10;
+    grid-row: 1 / 2;
+    padding: 0 77px 0 85px;
   }
 
   &__socials {
-    width: 165px;
+    grid-column: 11 / 13;
+    grid-row: 1 / 2;
+    padding-left: 55px;
   }
 }
 

@@ -1,0 +1,74 @@
+.about-me {
+    
+    &__container {
+        min-height: 709px;
+        height: 709px;
+        @include grid-v(12, 30px);
+        grid-template-rows: 53px 1fr 150px;
+    }
+
+    &__left {
+        grid-column: 3 / 6;
+        grid-row: 2 / 3;
+    }
+
+    &__right {
+        grid-column: 6 / 11;
+        grid-row: 2 / 3;
+        padding: 0 50px;
+    }
+
+    &__hello {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    &__ps {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: italic;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "*";
+            top: 0;
+            left: -40px;
+            font-size: 48px;
+            color: #db0200;
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+}
+.triangles {
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+    fill: #fff;
+    display: flex;
+    justify-content: flex-start;
+
+    &__item-left {
+        width: 70%;
+    }
+
+    &__item-right {
+        width: 32%;
+    }
+
+}

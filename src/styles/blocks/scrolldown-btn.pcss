@@ -1,15 +1,27 @@
 .scrolldown-btn {
+    display:flex;
+    align-items: center;
 
     &__link {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 150px;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover .scrolldown-btn__icon {
+            fill: #fff;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__icon {
-        width: 20px;
+        width: 30px;
         height: 30px;
-        fill: #fff;
+        fill: #534d5d;
     }
 }

@@ -1,25 +1,24 @@
 .hero {
   background: url('../images/content/rockfest.png') center center no-repeat / cover;
   color: #fff;
-  padding: 51px 0;
 
   &__container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
+    height: 100vh;
+    @include grid-v(12, 30px);
+    grid-template-rows: 150px 1fr 150px;
   }
 
   &__content {
-    width: 647px;
+    grid-row: 2 / 3;
+    grid-column: 4 / 10;
+    @include grid-v(6, 30px);
+    grid-template-rows: 1fr auto 1fr;
   }
 
   &__btns {
-    width: 100px;
-    display: flex;
-    justify-content: center;
+    grid-column: 6 / 8;
+    grid-row: 3 / 4;
     align-items: center;
+    padding: 0 61px 0 54px;
   }
 }
