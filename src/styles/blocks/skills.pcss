@@ -1,6 +1,27 @@
 .skills {
     min-height: 1015px;
-    height: 1015px;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        width: 471px;
+        height: 1136px;
+        left: 202px;
+        bottom: 200px;
+        content: "";
+        background: url('/src/images/content/electric_guitar.png') center center no-repeat / contain;
+    }
+
+    &:before {
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        left: -20px;
+        bottom: 100px;
+        content: "";
+        background: url('/src/images/content/rocknroll.png') center center no-repeat / contain;
+        opacity: .1;
+    }
 
     &__container {
         height: 100%;
@@ -9,7 +30,7 @@
     }
 
     &__content {
-        grid-column: 5 / 12;
+        grid-column: 5 / 11;
         grid-row: 2 / 3;
         @include grid-v(7, 30px);
         grid-template-rows: 47px 166px 1fr;
@@ -27,8 +48,63 @@
         align-items: center;
     }
 
-    &__values {
+    &__list {
         grid-column: 2 / 8;
         grid-row: 3 / 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
+    &__list li ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-title {
+        font-size: 24px;
+        color: #100022;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+    }
+}
+
+.skill {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.skill__title {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    text-align: center;
+    font-size: 18px;
+    line-height: 48px;
+    color: #100022;
+    font-weight: 700;
+}
+
+
+.skill__shape {
+    width: 100%;
+    height: 100%;
+}
+
+.skill__circle--position--under {
+    stroke-width: 10px;
+    stroke: #e9e9e9;
+    
+}
+
+.skill__circle--position--above {
+    stroke-width: 20px;
+    stroke: blue;
+    fill: #fff;
+
 }

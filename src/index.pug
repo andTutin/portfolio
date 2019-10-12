@@ -61,4 +61,24 @@ html(lang="en")
           .skills__content
             h2.skills__title Чем я могу быть полезен вам
             .skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            .skills__values
+            ul.skills__list
+              - var skills = [['frontend', ['HTML5', 'CSS3', 'JavaScript', 'JQuery & Vue.js']],['workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']]]
+                each item in skills
+                  li.skills__item(class=`${item[0]}`)
+                    h3.skills__item-title #{item[0]}
+                    ul(class=`${item[0]}__list`)
+                      each value in item[1]
+                        li(class=`${item[0]}`+'__item')
+                          .skill(class='skill--' + `${value}`)
+                            svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
+                              circle(cx="100" cy="100" r="80" stroke="#e9e9e9" stroke-width="10" fill="none")
+                              circle(cx="100" cy="100" r="80" stroke="#673E93" stroke-width="20" stroke-dasharray ="126 377" fill="none" transform="rotate(-180 100 100)")
+                            h4.skill__title= `${value}`
+                            
+      section.portfolio#portfolio
+        .container.portfolio__container
+          h2.portfolio__title Мои работы
+          .portfolio__content
+            .portfolio__content-left.slider
+              .slider__
+            .portfolio__content-right
