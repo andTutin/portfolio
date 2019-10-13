@@ -1,0 +1,46 @@
+.work {
+    display: grid;
+    grid-template-rows: 96px 117px 157px 1fr;
+
+    &__tags {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    &__title {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        font-size: 30px;
+        line-height: 48px;
+        color: #353e4f;
+        font-weight: 700;
+    }
+
+    &__decsription {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        font-size: 16px;
+        line-height: 30px;
+        color: #333c49;
+        font-weight: 600;
+    }
+
+    &__link {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        font-size: 18px;
+        color: #586ed3;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+            fill: #586ed3;
+            margin-right: 20px;
+        }
+
+    }
+}

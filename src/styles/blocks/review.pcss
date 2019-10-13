@@ -1,0 +1,41 @@
+.review {
+    display: grid;
+    grid-template-columns: 75px 430px;
+    grid-template-rows: 128px 106px;
+
+    &__left {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+
+        &-icon {
+            width: 65px;
+            height: 68px;
+        }
+    }
+
+    &__right {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        display: grid;
+        grid-template-rows: 128px 106px;
+        padding-right: 80px;
+    }
+
+    &__text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+
+    &__author {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+}

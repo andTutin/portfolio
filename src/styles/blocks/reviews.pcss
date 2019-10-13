@@ -1,0 +1,61 @@
+.reviews {
+    min-height: 618px;
+
+    &__container {
+        grid-template-rows: 130px 73px 65px 250px 100px;
+    }
+
+    &__title {
+        grid-row: 2 / 3;
+        grid-column: 1 / 5;
+        font-size: 36px;
+        color: #333c49;
+        font-weight: 700;
+    }
+
+    &__btns {
+        grid-row: 2 / 3;
+        grid-column: 5 / 7;
+        display: grid;
+    }
+
+    &__prev {
+        width: 60px;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background: none;
+        grid-column: 1 / 2;
+        border-radius: 50%;
+
+        &-icon {
+            transform: rotate(180deg);
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__next {
+        width: 60px;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 50%;
+        grid-column: 2 / 3;
+        background: none;
+        border-radius: 50%;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__slider {
+        grid-row: 4 / 5;
+        grid-column: 1 / 9;
+    }
+
+    &__list {
+        display: flex;
+    }
+}

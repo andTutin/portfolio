@@ -1,0 +1,57 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__label {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 45px;
+        margin-right: 50px;
+        border-bottom: 2px solid black;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            width: 32px;
+            height: 32px;
+            background: url('/src/images/icons/pencil.svg') center center no-repeat / cover;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+
+        &-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    &__input {
+        margin-top: 30px;
+        border: none;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__button {
+        background-image: linear-gradient(90deg, #3056e8 0%, #4c87ee 100%);
+        font-size: 18px;
+        font-weight: 700;
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
+}
