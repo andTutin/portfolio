@@ -54,10 +54,10 @@ html(lang="en")
                 .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
         .triangles
-                svg.triangles__item-left(viewBox="0 0 1000 100" preserveAspectRatio="none")
-                  polygon(points="0,0 0,100 1000,100")
-                svg.triangles__item-right(viewBox="0 0 1000 100" preserveAspectRatio="none")
-                  polygon(points="0,100 1000,100 1000,0")
+          svg.triangles__item-left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,0 0,100 1000,100")
+          svg.triangles__item-right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+            polygon(points="0,100 1000,100 1000,0")
 
       section.skills#skills
         .container.skills__container
@@ -84,11 +84,11 @@ html(lang="en")
           .container.portfolio__container
             h2.portfolio__title Мои работы
             .portfolio__slider.slider
-              .slider__fullsize(style="background: url('../images/content/1.jpg') left top no-repeat / cover")
+              .slider__fullsize(style="background: url('../src/images/content/1.jpg') left top no-repeat / cover")
               .slider__controlls
                 ul.slider__previews 
                   - for (var i = 1; i <= 4; i++)
-                    li.slider__previews-item(style=`background: url(../images/content/` + `${i}` + `.jpg) left top no-repeat / cover`)
+                    li.slider__previews-item(style='background: url(../src/images/content/' + `${i}` + '.jpg) left top no-repeat / cover')
                 .slider__btns
                   button.slider__next
                     +icon("arrow-down", "slider__next-icon")
@@ -143,13 +143,15 @@ html(lang="en")
             h2.contact-me__title Связаться со мной
             form.contact-me__form.form
               .form__row
-                label.form__label 
+                label.form__label.form__label--name
                   span.form__label-title Введите ваше имя
                   input(type="text" placeholder="Ковальчук Дмитрий" name="name" required autocomplete="off").form__input
-                label.form__label Введите ваш email
+                label.form__label.form__label--email
+                  span.form__label-title Введите ваш email
                   input(type="email" placeholder="loftschool@study.com" name="email" required autocomplete="off").form__input
               .form__row
-                label.form__label Сообщение к письму
+                label.form__label.form__label--message
+                  span.form__label-title Сообщение к письму
                   input(type="textarea" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена" name="message" required autocomplete="off").form__input
               .form__row
                 button.form__button Отправить

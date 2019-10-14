@@ -1,9 +1,9 @@
 .about-me {
-    min-height: 400px;
+    min-height: 620px;
     color: #fff;
     
     &__container {
-        grid-template-rows: 53px 1fr 150px;
+        grid-template-rows: 110px 1fr 150px;
     }
 
     &__left {
@@ -14,13 +14,13 @@
     &__right {
         grid-column: 6 / 11;
         grid-row: 2 / 3;
-        padding: 0 50px;
+        padding: 0 25px 0 50px;
     }
 
     &__hello {
         font-size: 16px;
         font-weight: 600;
-        margin-bottom: 30px;
+        margin-bottom: 16px;
     }
 
     &__title {
@@ -33,7 +33,7 @@
         font-size: 16px;
         line-height: 30px;
         font-weight: 600;
-        margin-bottom: 30px;
+        margin-bottom: 90px;
     }
 
     &__ps {
@@ -47,27 +47,11 @@
             position: absolute;
             content: "*";
             top: 10px;
-            left: -50px;
+            left: -60px;
             font-size: 48px;
             color: #db0200;
             font-weight: 400;
             font-style: italic;
         }
     }
-}
-.triangles {
-    grid-column: 1 / 13;
-    grid-row: 3 / 4;
-    fill: #fff;
-    display: flex;
-    justify-content: space-between;
-
-    &__item-left {
-        width: 400%;
-    }
-
-    &__item-right {
-        width: 100%;
-    }
-
 }

@@ -15,17 +15,43 @@
         flex-direction: column;
         padding: 10px 45px;
         margin-right: 50px;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid #fff;
         position: relative;
 
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 15px;
-            width: 32px;
-            height: 32px;
-            background: svg-load('pencil.svg', fill=$text-color, width=100%, height=100%) center center no-repeat / cover;
+        &--name {
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 15px;
+                width: 30px;
+                height: 23px;
+                background: svg-load('user.svg', fill=#fff, width=32px, height=23px) center center no-repeat / cover;
+            }
+        }
+
+        &--email {
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 15px;
+                width: 30px;
+                height: 23px;
+                background: svg-load('envelope.svg', fill=#fff, width=32px, height=23px) center center no-repeat / cover;
+            }
+        }
+
+        &--message {
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 15px;
+                width: 30px;
+                height: 23px;
+                background: svg-load('pencil.svg', fill=#fff, width=32px, height=23px) center center no-repeat / cover;
+            }
         }
 
         &:last-child {
@@ -43,17 +69,16 @@
         margin-top: 30px;
         border: none;
         padding: 10px 0;
+        color: #fff;
         font-size: 18px;
         font-weight: 700;
         background-color: transparent;
+    }
 
-        &:focus {
-            background: transparent;
-        }
-
-        &:active {
-            background: transparent;
-        }
+    &__input:placeholder {
+        background: transparent;
+        font-size: 18px;
+        font-weight: 700;
     }
 
     &__button {
@@ -62,5 +87,10 @@
         font-weight: 700;
         padding: 20px 50px;
         border-radius: 40px;
+        color: #fff;
+
+        &:hover {
+            background-image: linear-gradient(90deg, #005dff 0%, #0090ff 100%);
+        }
     }
 }
