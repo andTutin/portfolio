@@ -9,52 +9,55 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      section.hero#main
-        .container.hero__container
-          header.header
-            .logo АТ
-            nav.header__menu.menu
-              ul.menu__list
-                -var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
-                each item in menuItems
-                  li.menu__item
-                    a(href="#"+`${item.id}`).menu__link= item.text
-            address.header__socials.socials
-              ul.socials__list
-                - var socialsItems = [{"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"}, {"icon": 'vk', 'link': "https://vk.com/and.tutin"}, {"icon": "github", 'link': "https://github.com/andTutin"}]
-                each item in socialsItems
-                  li.socials__item
-                    a(href=item.link).socials__link
-                      +icon(item.icon, "socials__icon")
-          .hero__content.developer-info
-            .developer-info__desc Личный сайт<br>веб разработчика 
-            .developer-info__name Андрей Тутин
-          .hero__btns.scrolldown-btn
-            a(href="#about-me").scrolldown-btn__link Скролл
-              +icon("scroll", "scrolldown-btn__icon")
-      
+      .parallax
+        section.hero#main
+          .container.hero__container
+            header.header
+              .logo АТ
+              nav.header__menu.menu
+                ul.menu__list
+                  -var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
+                  each item in menuItems
+                    li.menu__item
+                      a(href="#"+`${item.id}`).menu__link= item.text
+              address.header__socials.socials
+                ul.socials__list
+                  - var socialsItems = [{"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"}, {"icon": 'vk', 'link': "https://vk.com/and.tutin"}, {"icon": "github", 'link': "https://github.com/andTutin"}]
+                  each item in socialsItems
+                    li.socials__item
+                      a(href=item.link).socials__link
+                        +icon(item.icon, "socials__icon")
+            .hero__content
+              .developer-info
+                .developer-info__desc Личный сайт<br>веб разработчика 
+                .developer-info__name Андрей<br>Тутин
+            .hero__btns.scrolldown-btn
+              a(href="#about-me").scrolldown-btn__link Скролл
+                +icon("scroll", "scrolldown-btn__icon")
+        
         section.about-me#about-me
-          .container.about-me__container
-            .about-me__left
-              .user
-                .avatar.user__avatar
-                  +image("content/user.jpg", "avatar__pic")
-                ul.user__info
-                  - var infoItems = [['Проживаю:', 'Санкт-Петербург'],['Возраст:', '32'],['Родился:', 'Гатчина']]
-                  each item in infoItems
-                    li.user__info-item
-                      .user__key #{item[0]}
-                      .user__value #{item[1]}
-            .about-me__right
-              h4.about-me__hello Привет, меня зовут
-              h3.about-me__title Андрей Тутин
-              .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            .triangles
-              svg.triangles__item-left(viewBox="0 0 1000 100" preserveAspectRatio="none")
-                polygon(points="0,0 0,100 1000,100")
-              svg.triangles__item-right(viewBox="0 0 1000 100" preserveAspectRatio="none")
-                polygon(points="0,100 1000,100 1000,0")
+            .container.about-me__container
+              .about-me__left
+                .user
+                  .avatar.user__avatar
+                    +image("content/user.jpg", "avatar__pic")
+                  ul.user__info
+                    - var infoItems = [['Проживаю:', 'Санкт-Петербург'],['Возраст:', '32'],['Родился:', 'Гатчина']]
+                    each item in infoItems
+                      li.user__info-item
+                        .user__key #{item[0]}
+                        .user__value #{item[1]}
+              .about-me__right
+                h4.about-me__hello Привет, меня зовут
+                h3.about-me__title Андрей Тутин
+                .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+        .triangles
+                svg.triangles__item-left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+                  polygon(points="0,0 0,100 1000,100")
+                svg.triangles__item-right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+                  polygon(points="0,100 1000,100 1000,0")
 
       section.skills#skills
         .container.skills__container
@@ -75,79 +78,81 @@ html(lang="en")
                                 circle(cx="100" cy="100" r="80" stroke="#e9e9e9" stroke-width="10" fill="#fff")
                                 circle(cx="100" cy="100" r="80" stroke="#3965ea" stroke-width="20" stroke-dasharray =`${dashArray}` + ' 503' fill="#fff" transform="rotate(-180 100 100)")
                               h4.skill__title= `${skill}`
-                            
+
+             
       section.portfolio#portfolio
-        .container.portfolio__container
-          h2.portfolio__title Мои работы
-          .portfolio__slider.slider
-            .slider__fullsize(style="background: url('/src/images/content/1.jpg') left top no-repeat / cover")
-            .slider__controlls
-              ul.slider__previews 
-                - for (var i = 1; i <= 4; i++)
-                  li.slider__previews-item(style=`background: url(/src/images/content/` + `${i}` + `.jpg) left top no-repeat / cover`)
-              .slider__btns
-                button.slider__next
-                  +icon("arrow-down", "slider__next-icon")
-                button.slider__prev
-                  +icon("arrow-down", "slider__prev-icon")
-          .portfolio__work.work
-              .work__tags.tags
-                ul.tags__list
-                  - var tags = ['html', 'css', 'javascript']
-                    each tag in tags
-                      li.tags__item #{tag}
-              .work__title Сайт школы  образования
-              .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-              a.work__link(href="#" target="_blank")
-                +icon("link", "work__link-icon")
-                p Посмотреть сайт
+          .container.portfolio__container
+            h2.portfolio__title Мои работы
+            .portfolio__slider.slider
+              .slider__fullsize(style="background: url('/src/images/content/1.jpg') left top no-repeat / cover")
+              .slider__controlls
+                ul.slider__previews 
+                  - for (var i = 1; i <= 4; i++)
+                    li.slider__previews-item(style=`background: url(/src/images/content/` + `${i}` + `.jpg) left top no-repeat / cover`)
+                .slider__btns
+                  button.slider__next
+                    +icon("arrow-down", "slider__next-icon")
+                  button.slider__prev
+                    +icon("arrow-down", "slider__prev-icon")
+            .portfolio__work.work
+                .work__tags.tags
+                  ul.tags__list
+                    - var tags = ['html', 'css', 'javascript']
+                      each tag in tags
+                        li.tags__item #{tag}
+                .work__title Сайт школы  образования
+                .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                a.work__link(href="#" target="_blank")
+                  +icon("link", "work__link-icon")
+                  p Посмотреть сайт
 
-      section.reviews#reviews
-        .container.reviews__container
-          h2.reviews__title Что обо мне говорят
-          .reviews__btns
-            button.reviews__prev
-              +icon("arrow-down", "reviews__prev-icon")
-            button.reviews__next
-               +icon("arrow-down", "reviews__next-icon")
-          .reviews__slider
-            ul.reviews__list
-              li.reviews__item.review
-                .review__left
-                  +icon("quote", "review__left-icon")
-                .review__right
-                  article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                  .review__author.author
-                    .author__avatar.avatar
-                      +image("content/user.jpg", "author__avatar-pic")
-                    .author__name Ковальчук Дмитрий
-                    .author__business Основатель Loftschool
-              li.reviews__item.review
-                .review__left
-                  +icon("quote", "review__left-icon")
-                .review__right
-                  article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                  .review__author.author
-                    .author__avatar.avatar
-                      +image("content/user.jpg", "authir__avatar-pic")
-                    .author__name Ковальчук Дмитрий
-                    .author__business Основатель Loftschool
+      .rock-musician  
+        section.reviews#reviews
+          .container.reviews__container
+            h2.reviews__title Что обо мне говорят
+            .reviews__btns
+              button.reviews__prev
+                +icon("arrow-down", "reviews__prev-icon")
+              button.reviews__next
+                +icon("arrow-down", "reviews__next-icon")
+            .reviews__slider
+              ul.reviews__list
+                li.reviews__item.review
+                  .review__left
+                    +icon("quote", "review__left-icon")
+                  .review__right
+                    article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                    .review__author.author
+                      .author__avatar.avatar
+                        +image("content/user.jpg", "author__avatar-pic")
+                      .author__name Ковальчук Дмитрий
+                      .author__business Основатель Loftschool
+                li.reviews__item.review
+                  .review__left
+                    +icon("quote", "review__left-icon")
+                  .review__right
+                    article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                    .review__author.author
+                      .author__avatar.avatar
+                        +image("content/user.jpg", "authir__avatar-pic")
+                      .author__name Ковальчук Дмитрий
+                      .author__business Основатель Loftschool
 
-      section.contact-me#contact-me
-        .container.contact-me__container
-          h2.contact-me__title Связаться со мной
-          form.contact-me__form.form
-            .form__row
-              label.form__label 
-                span.form__label-title Введите ваше имя
-                input(type="text" placeholder="Ковальчук Дмитрий" name="name" required).form__input
-              label.form__label Введите ваш email
-                input(type="email" placeholder="loftschool@study.com" name="email" required).form__input
-            .form__row
-              label.form__label Сообщение к письму
-                input(type="textarea" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена" name="message" required).form__input
-            .form__row
-              button.form__button Отправить
+        section.contact-me#contact-me
+          .container.contact-me__container
+            h2.contact-me__title Связаться со мной
+            form.contact-me__form.form
+              .form__row
+                label.form__label 
+                  span.form__label-title Введите ваше имя
+                  input(type="text" placeholder="Ковальчук Дмитрий" name="name" required).form__input
+                label.form__label Введите ваш email
+                  input(type="email" placeholder="loftschool@study.com" name="email" required).form__input
+              .form__row
+                label.form__label Сообщение к письму
+                  input(type="textarea" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена" name="message" required).form__input
+              .form__row
+                button.form__button Отправить
 
       footer.footer
         .container.footer__container

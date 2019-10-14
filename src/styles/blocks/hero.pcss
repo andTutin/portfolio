@@ -1,17 +1,17 @@
 .hero {
-  background: url('/src/images/content/rockfest.png') center center no-repeat / cover;
   color: #fff;
 
   &__container {
     height: 100vh;
-    grid-template-rows: 150px 1fr 150px;
+    grid-template-rows: 150px auto 150px;
   }
 
   &__content {
     grid-row: 2 / 3;
     grid-column: 4 / 10;
-    @include grid-v(6, 30px);
-    grid-template-rows: 1fr auto 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__btns {
