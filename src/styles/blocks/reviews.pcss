@@ -1,5 +1,6 @@
 .reviews {
     min-height: 618px;
+    color: #333c49;
 
     &__container {
         grid-template-rows: 130px 73px 65px 250px 100px;
@@ -9,7 +10,7 @@
         grid-row: 2 / 3;
         grid-column: 1 / 5;
         font-size: 36px;
-        color: #333c49;
+        color: #fff;
         font-weight: 700;
     }
 
@@ -22,31 +23,39 @@
     &__prev {
         width: 60px;
         height: 60px;
-        border: 1px solid black;
+        border: 1px solid #fff;
         border-radius: 50%;
         background: none;
         grid-column: 1 / 2;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &-icon {
             transform: rotate(180deg);
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
+            fill: #fff;
         }
     }
 
     &__next {
         width: 60px;
         height: 60px;
-        border: 1px solid black;
+        border: 2px solid #fff;
         border-radius: 50%;
         grid-column: 2 / 3;
         background: none;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &-icon {
             width: 20px;
             height: 20px;
+            fill: #fff;
         }
     }
 
