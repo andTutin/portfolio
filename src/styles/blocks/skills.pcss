@@ -6,8 +6,8 @@
         position: absolute;
         width: 471px;
         height: 1136px;
-        left: 202px;
-        bottom: 200px;
+        left: 210px;
+        bottom: 300px;
         content: "";
         background: url('../images/content/electric_guitar.png') center center no-repeat / contain;
     }
@@ -16,8 +16,8 @@
         position: absolute;
         width: 600px;
         height: 500px;
-        left: -20px;
-        bottom: 100px;
+        left: -30px;
+        bottom: 200px;
         content: "";
         background: url('../images/content/rocknroll.png') center center no-repeat / contain;
         opacity: .1;
@@ -28,15 +28,18 @@
     }
 
     &__content {
-        grid-column: 5 / 11;
+        grid-column: 5 / 12;
         grid-row: 2 / 3;
-        @include grid-v(7, 30px);
-        grid-template-rows: 47px 166px 1fr;
+        @include grid-v(6, 20px);
+        grid-template-rows: 47px 170px 475px;
     }
 
     &__title {
-        grid-column: 1 / 5;
+        grid-column: 1 / 6;
         grid-row: 1 / 2;
+        font-size: 30px;
+        color: #100022;
+        font-weight: 700;
     }
 
     &__text {
@@ -44,6 +47,12 @@
         grid-row: 2 / 3;
         display: flex;
         align-items: center;
+        padding-right: 80px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #100022;
+        font-weight: 600;
+        
     }
 
     &__list {
@@ -51,7 +60,12 @@
         grid-row: 3 / 4;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
+        padding-top: 48px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 47px;
     }
 
     &__list li ul {
