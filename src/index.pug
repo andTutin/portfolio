@@ -84,11 +84,11 @@ html(lang="en")
           .container.portfolio__container
             h2.portfolio__title Мои работы
             .portfolio__slider.slider
-              .slider__fullsize(style="background: url('/src/images/content/1.jpg') left top no-repeat / cover")
+              .slider__fullsize(style="background: url('../images/content/1.jpg') left top no-repeat / cover")
               .slider__controlls
                 ul.slider__previews 
                   - for (var i = 1; i <= 4; i++)
-                    li.slider__previews-item(style=`background: url(/src/images/content/` + `${i}` + `.jpg) left top no-repeat / cover`)
+                    li.slider__previews-item(style=`background: url(../images/content/` + `${i}` + `.jpg) left top no-repeat / cover`)
                 .slider__btns
                   button.slider__next
                     +icon("arrow-down", "slider__next-icon")
@@ -134,7 +134,7 @@ html(lang="en")
                     article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
                     .review__author.author
                       .author__avatar.avatar
-                        +image("content/user.jpg", "authir__avatar-pic")
+                        +image("content/user.jpg", "author__avatar-pic")
                       .author__name Ковальчук Дмитрий
                       .author__business Основатель Loftschool
 
