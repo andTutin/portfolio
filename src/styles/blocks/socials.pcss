@@ -11,17 +11,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width : 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(#fff, .3);
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+            border: 1px solid rgba(#fff, 1);
+            transition: .3s;
+        }
+
+        &:hover  .socials__icon {
+            fill: #fff;
+            transform: scale(1.1);
+            transition: .3s;
+        }
     }
 
     &__icon {
-        width: 25px;
-        height: 25px;
+        width: 24px;
+        height: 24px;
         fill: #534d5d;
-
-        &:hover {
-            fill: #fff;
-            transform: scale(1.1);
-            transition: fill .3s;
-        }
     }
 }

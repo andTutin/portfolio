@@ -19,9 +19,7 @@ html(lang="en")
               address.header__socials.socials
                 include ./components/socials
             .hero__content
-              .developer-info
-                .developer-info__desc Личный сайт<br>веб разработчика 
-                .developer-info__name Андрей<br>Тутин
+              include ./components/developer-info
             .hero__btns.scrolldown-btn
               a(href="#about-me").scrolldown-btn__link Скролл
                 +icon("scroll", "scrolldown-btn__icon")
@@ -122,9 +120,8 @@ html(lang="en")
       footer.footer
         .container.footer__container
           .footer__year © 2019
-          .footer__developer-info.developer-info
-            .developer-info__desc Личный сайт веб разработчика 
-            .developer-info__name Андрей Тутин
+          .footer__developer-info
+            include ./components/developer-info
           .footer__menu.menu
             include ./components/menu
           .footer__socials.socials
