@@ -15,18 +15,9 @@ html(lang="en")
             header.header
               .logo АТ
               nav.header__menu.menu
-                ul.menu__list
-                  -var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
-                  each item in menuItems
-                    li.menu__item
-                      a(href="#"+`${item.id}`).menu__link= item.text
+                include ./components/menu
               address.header__socials.socials
-                ul.socials__list
-                  - var socialsItems = [{"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"}, {"icon": 'vk', 'link': "https://vk.com/and.tutin"}, {"icon": "github", 'link': "https://github.com/andTutin"}]
-                  each item in socialsItems
-                    li.socials__item
-                      a(href=item.link).socials__link
-                        +icon(item.icon, "socials__icon")
+                include ./components/socials
             .hero__content
               .developer-info
                 .developer-info__desc Личный сайт<br>веб разработчика 
@@ -37,27 +28,15 @@ html(lang="en")
         
         section.about-me#about-me
             .container.about-me__container
-              .about-me__left
-                .user
-                  .avatar.user__avatar
-                    +image("content/user.jpg", "avatar__pic")
-                  ul.user__info
-                    - var infoItems = [['Проживаю:', 'Санкт-Петербург'],['Возраст:', '32'],['Родился:', 'Гатчина']]
-                    each item in infoItems
-                      li.user__info-item
-                        .user__key #{item[0]}
-                        .user__value #{item[1]}
+              .about-me__left.user
+                include ./components/user
               .about-me__right
                 h4.about-me__hello Привет, меня зовут
                 h3.about-me__title Андрей Тутин
                 .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
-        .triangles
-          svg.triangles__item-left(viewBox="0 0 1000 100" preserveAspectRatio="none")
-            polygon(points="0,0 0,100 1000,100")
-          svg.triangles__item-right(viewBox="0 0 1000 100" preserveAspectRatio="none")
-            polygon(points="0,100 1000,100 1000,0")
+        include ./components/triangles
 
       section.skills#skills
         .container.skills__container
@@ -65,22 +44,8 @@ html(lang="en")
             h2.skills__title Чем я могу быть полезен вам
             .skills__text 
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            ul.skills__list
-              - var skills = [['frontend', ['HTML5', 'CSS3', 'JavaScript', 'JQuery & Vue.js'], ['25', '13', '75', '25']],['workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack'], ['13', '25', '50', '35']]]
-                each item in skills
-                  li.skills__item(class=`${item[0]}`)
-                    h3.skills__item-title #{item[0]}
-                    ul(class=`${item[0]}__list`)
-                      each skill, index in item[1]
-                        - var dashArray = item[2][index] * 2 * 3.14 * 80 / 100
-                          li(class=`${item[0]}`+'__item')
-                            .skill(class='skill--' + `${skill}`)
-                              svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
-                                circle(cx="100" cy="100" r="80" stroke="#e9e9e9" stroke-width="10" fill="#fff")
-                                circle(cx="100" cy="100" r="80" stroke="#3965ea" stroke-width="20" stroke-dasharray =`${dashArray}` + ' 503' fill="transparent" transform="rotate(-180 100 100)")
-                              h4.skill__title= `${skill}`
-
-             
+            include ./components/skills
+    
       section.portfolio#portfolio
           .container.portfolio__container
             h2.portfolio__title Мои работы
@@ -97,10 +62,7 @@ html(lang="en")
                     +icon("arrow-down", "slider__prev-icon")
             .portfolio__work.work
                 .work__tags.tags
-                  ul.tags__list
-                    - var tags = ['html', 'css', 'javascript']
-                      each tag in tags
-                        li.tags__item #{tag}
+                  include ./components/tags
                 .work__title Сайт школы  образования
                 .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
                 a.work__link(href="#" target="_blank")
@@ -164,18 +126,10 @@ html(lang="en")
             .developer-info__desc Личный сайт веб разработчика 
             .developer-info__name Андрей Тутин
           .footer__menu.menu
-            ul.menu__list
-              -var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
-              each item in menuItems
-                li.menu__item
-                  a(href="#"+`${item.id}`).menu__link= item.text
+            include ./components/menu
           .footer__socials.socials
             ul.socials__list
-              - var socialsItems = [{"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"}, {"icon": 'vk', 'link': "https://vk.com/and.tutin"}, {"icon": "github", 'link': "https://github.com/andTutin"}]
-              each item in socialsItems
-                li.socials__item
-                  a(href=item.link).socials__link
-                    +icon(item.icon, "socials__icon")
+              include ./components/socials
           .footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.
           quote.footer__quote 
             p Всегда пишите код так,будто сопровождать его будет склонный к насилию психопат, который знает где вы живёте

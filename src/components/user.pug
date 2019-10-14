@@ -1,0 +1,8 @@
+.avatar.user__avatar
+    +image("content/user.jpg", "avatar__pic")
+- var infoItems = [['Проживаю:', 'Санкт-Петербург'],['Возраст:', '32'],['Родился:', 'Гатчина']]
+ul.user__info
+    each item in infoItems
+        li.user__info-item
+            .user__key #{item[0]}
+            .user__value #{item[1]}
