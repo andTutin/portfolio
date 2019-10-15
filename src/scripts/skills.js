@@ -3,17 +3,49 @@ import Vue from 'vue';
 new Vue ({
     el: "#skills",
     data: {
-        frontend: {
-            'HTML': 25,
-            'CSS': 13,
-            'Javascript': 75,
-            'JQuery & Vue.js': 25 
-        },
-        workflow: {
-            'GIT': 13,
-            'Terminal': 25,
-            'Gulp': 50,
-            'Webpack': 35
-        }
+        skills: [
+            {
+                "category": "frontend",
+                "tech": [
+                    {
+                        "title": 'HTML',
+                        "percent": 25
+                    },
+                    {
+                        "title": 'CSS',
+                        "percent": 13
+                    },
+                    {
+                        "title": 'Javascript',
+                        "percent": 75
+                    },
+                    {
+                        "title": 'JQuery & Vue.js',
+                        "percent": 25
+                    }
+                ]
+            },
+            {
+                "category": "workflow",
+                "tech": [
+                    {
+                        "title": 'GIT',
+                        "percent": 13
+                    },
+                    {
+                        "title": 'Terminal',
+                        "percent": 25
+                    },
+                    {
+                        "title": 'Gulp',
+                        "percent": 50
+                    },
+                    {
+                        "title": 'Webpack',
+                        "percent": 35
+                    }
+                ]
+            }
+        ]
     }
 })
