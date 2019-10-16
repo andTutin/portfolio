@@ -1,18 +1,15 @@
-skills-list#skills-block
+#skills-list
 
 script(type="text/x-template")#skills-list-template
     ul.skills__list#skills
         li.skills__item(v-for="cat in skills" :class="cat.category")
-            h3.skills__item-title {{cat.category}}
-            ul(:class= "cat.category + '__list'")
-                li(v-for="item in cat.tech" :class= "cat.category +'__item'")
-                    skillCircle(:skill="item")
-//-
-    categoryRow(:category="cat")
-    script(type="text/x-template")#category-row-template
-        h3.skills__item-title {{cat.category}}
-            ul(:class= "cat.category + '__list'")
-                li(v-for="item in cat.tech" :class= "item.category +'__item'")
+            categoryRow(:cat="cat")
+
+script(type="text/x-template")#category-row-template
+    h3.skills__item-title {{cat.category}}
+        ul(:class= "cat.category + '__list'")
+            li(v-for="item in cat.tech" :class= "item.category +'__item'")
+                skillCircle(:skill="item")
                     
 script(type="text/x-template")#skill-circle-template
     .skill(:class="'skill--' + skill.title")   
