@@ -1,6 +1,12 @@
-- var socialsItems = [{"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"}, {"icon": 'vk', 'link': "https://vk.com/and.tutin"}, {"icon": "github", 'link': "https://github.com/andTutin"}]
-ul.socials__list
-    each item in socialsItems
-        li.socials__item
-            a(href=item.link).socials__link
-                +icon(item.icon, "socials__icon")
+- 
+    var socialsItems = [
+            {"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"},
+            {"icon": 'vk', 'link': "https://vk.com/and.tutin"},
+            {"icon": "github", 'link': "https://github.com/andTutin"}
+        ]
+.socials  
+    ul.socials__list
+        each item in socialsItems
+            li.socials__item
+                a(href=item.link).socials__link
+                    +icon(item.icon, "socials__icon")

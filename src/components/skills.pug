@@ -1,12 +1,13 @@
 #skills-list
 
 script(type="text/x-template")#skills-list-template
-    ul.skills__list#skills
+    ul.skills__list
         li.skills__item(v-for="cat in skills" :class="cat.category")
             categoryRow(:cat="cat")
 
 script(type="text/x-template")#category-row-template
-    h3.skills__item-title {{cat.category}}
+    .skills__item-wrapper
+        h3.skills__item-title {{cat.category}}
         ul(:class= "cat.category + '__list'")
             li(v-for="item in cat.tech" :class= "item.category +'__item'")
                 skillCircle(:skill="item")

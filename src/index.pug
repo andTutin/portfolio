@@ -9,31 +9,30 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .parallax
+      include ./components/parallax
         section.hero#main
           .container.hero__container
             header.header
               .logo АТ
-              nav.header__menu.menu
+              nav.header__menu
                 include ./components/menu
-              address.header__socials.socials
+              address.header__socials
                 include ./components/socials
             .hero__content
               include ./components/developer-info
-            .hero__btns.scrolldown-btn
-              a(href="#about-me").scrolldown-btn__link Скролл
-                +icon("scroll", "scrolldown-btn__icon")
-        
+            .hero__btns
+              .scrolldown-btn
+                a(href="#about-me").scrolldown-btn__link Скролл
+                  +icon("scroll", "scrolldown-btn__icon")
         section.about-me#about-me
-            .container.about-me__container
-              .about-me__left.user
-                include ./components/user
-              .about-me__right
-                h4.about-me__hello Привет, меня зовут
-                h3.about-me__title Андрей Тутин
-                .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-
+          .container.about-me__container
+            .about-me__left.user
+              include ./components/user
+            .about-me__right
+              h4.about-me__hello Привет, меня зовут
+              h3.about-me__title Андрей Тутин
+              .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         include ./components/triangles
 
       section.skills#skills

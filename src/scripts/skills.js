@@ -1,17 +1,14 @@
 import Vue from 'vue';
 
-var skillCircle = {
+Vue.component('skillCircle', {
     template: "#skill-circle-template",
     props: ['skill']
-}
+})
 
-var categoryRow = {
+Vue.component('categoryRow', {
     template: "#category-row-template",
-    props: ['cat'],
-    components: {
-       "skillCircle": skillCircle
-    }
-}
+    props: ['cat']
+})
 
 new Vue({
     el: "#skills-list",
@@ -64,7 +61,4 @@ new Vue({
             ]
         }
     },
-    components: {
-        'categoryRow': categoryRow
-    }
 })

@@ -1,5 +1,14 @@
--var menuItems = [{'text': 'Главная','id':'main'}, {'text':'Обо мне', 'id': 'about-me'}, {'text': 'Навыки', 'id': 'skills'}, {'text': 'Работы', 'id': 'portfolio'}, {'text': 'Отзывы', 'id': 'reviews'}, {'text': 'Связаться', 'id': 'contact-me'}]
-each item in menuItems
+-
+    var menuItems = [
+            {'text': 'Главная','id':'main'},
+            {'text':'Обо мне', 'id': 'about-me'},
+            {'text': 'Навыки', 'id': 'skills'},
+            {'text': 'Работы', 'id': 'portfolio'},
+            {'text': 'Отзывы', 'id': 'reviews'},
+            {'text': 'Связаться', 'id': 'contact-me'}
+        ]
+.menu
     ul.menu__list
-        li.menu__item
-            a(href="#"+`${item.id}`).menu__link= item.text
+        each item in menuItems
+            li.menu__item
+                a(href="#"+`${item.id}`).menu__link= item.text
