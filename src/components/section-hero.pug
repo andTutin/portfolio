@@ -1,0 +1,14 @@
+section.hero#main
+    .container.hero__container
+        header.header
+            .logo АТ
+            nav.header__menu
+                include ./menu
+            address.header__socials
+                include ./socials
+        .hero__content
+            include ./developer-info
+        .hero__btns
+            .scrolldown-btn
+                a(href="#about-me").scrolldown-btn__link Скролл
+                    +icon("scroll", "scrolldown-btn__icon")

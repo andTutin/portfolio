@@ -9,14 +9,27 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      include ./components/parallax
+      .top-section
+        .parallax-css
+          .parallax-css__layer
+            +image("content/layer1.png", "parallax-css__image")
+          .parallax-css__layer
+            +image("content/layer2.png", "parallax-css__image")
+          .parallax-css__layer
+            +image("content/layer3.png", "parallax-css__image")
+          .parallax-css__layer
+            +image("content/layer4.png", "parallax-css__image")
+          .parallax-css__layer
+            +image("content/layer5.png", "parallax-css__image")
+            .parallax-css__content 
+//-       
         section.hero#main
           .container.hero__container
             header.header
               .logo АТ
               nav.header__menu
                 include ./components/menu
-              address.header__socials
+              .header__socials
                 include ./components/socials
             .hero__content
               include ./components/developer-info
@@ -38,15 +51,16 @@ html(lang="en")
       section.skills#skills
         .container.skills__container
           .skills__content
-            h2.skills__title Чем я могу быть полезен вам
+            h2.title.skills__title Чем я могу быть полезен вам
             .skills__text 
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             include ./components/skills
     
       section.portfolio#portfolio
-          .container.portfolio__container
-            h2.portfolio__title Мои работы
-            .portfolio__slider.slider
+        .container.portfolio__container
+          h2.title.portfolio__title Мои работы
+          .portfolio__slider
+            .slider
               .slider__fullsize(style="background: url('../src/images/content/1.jpg') left top no-repeat / cover")
               .slider__controlls
                 ul.slider__previews 
@@ -57,19 +71,21 @@ html(lang="en")
                     +icon("arrow-down", "slider__next-icon")
                   button.slider__prev
                     +icon("arrow-down", "slider__prev-icon")
-            .portfolio__work.work
-                .work__tags.tags
+          .portfolio__work
+            .work
+              .work__tags
+                .tags
                   include ./components/tags
-                .work__title Сайт школы  образования
-                .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                a.work__link(href="#" target="_blank")
-                  +icon("link", "work__link-icon")
-                  p Посмотреть сайт
+              .work__title Сайт школы  образования
+              .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+              a.work__link(href="#" target="_blank")
+                +icon("link", "work__link-icon")
+                p Посмотреть сайт
 
       .rock-musician  
         section.reviews#reviews
           .container.reviews__container
-            h2.reviews__title Что обо мне говорят
+            h2.title.reviews__title Что обо мне говорят
             .reviews__btns
               button.reviews__prev
                 +icon("arrow-down", "reviews__prev-icon")

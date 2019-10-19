@@ -1,38 +1,35 @@
 .work {
-    display: grid;
-    grid-template-rows: 82px 127px 157px 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     &__tags {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+        margin-bottom: 60px;
     }
 
     &__title {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
         font-size: 30px;
         line-height: 48px;
         color: #353e4f;
         font-weight: 700;
+        margin-bottom: 60px;
     }
 
     &__decsription {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
         font-size: 16px;
         line-height: 30px;
         color: #333c49;
         font-weight: 600;
+        margin-bottom: 60px;
     }
 
     &__link {
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
         font-size: 18px;
         color: #586ed3;
         font-weight: 700;
         text-decoration: none;
         display: flex;
+        width: fit-content;
         align-items: flex-start;
 
         &-icon {
@@ -42,5 +39,9 @@
             margin-right: 20px;
         }
 
+    }
+
+    &__link p {
+        display: inline-block;
     }
 }
