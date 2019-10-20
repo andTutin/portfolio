@@ -4,4 +4,4 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import "./scripts/skills";
-import "./scripts/parallax-scroll";
+import "./scripts/parallax";
