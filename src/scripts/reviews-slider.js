@@ -16,8 +16,7 @@ new Vue({
         wrapAround: false,
         groupCells: 2,
         draggable: false,
-        cellAlign: 'left',
-        autoplay: 1500
+        cellAlign: 'left'
       }
     }
   },

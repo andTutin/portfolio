@@ -6,8 +6,8 @@ section.reviews#reviews
                 +icon("arrow-down", "reviews__prev-icon")
             button.reviews__next(@click="туче()")
                 +icon("arrow-down", "reviews__next-icon")
-        Flickity(ref="flickity" :options="flickityOptions").reviews__slider(style="overflow: hidden; display: flex")
-            .carousel-cell(style="width: 50%")
+        Flickity(ref="flickity" :options="flickityOptions").reviews__slider(style="display: flex")
+            .carousel-cell
                 .review
                     .review__left
                         +icon("quote", "review__left-icon")
