@@ -11,6 +11,10 @@
         grid-row: 1 / 2;
         display: flex;
         justify-content: center;
+
+        @include tablets {
+            justify-content: flex-start;
+        }
     }
 
     &__info {
@@ -28,5 +32,23 @@
 
     &__key {
         opacity: .4;
+
+        @include tablets {
+            font-size: 14px;
+            line-height: 30px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-weight: 600;
+        }
+    }
+
+    &__value {
+        @include tablets {
+            font-size: 14px;
+            line-height: 30px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-weight: 600;
+        }
     }
 }

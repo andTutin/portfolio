@@ -6,11 +6,16 @@
   @include grid-v(12, 30px);
 
   @include desktop {
-    width: 95%;
     max-width: 1080px;
   }
 
-  @include phones {
-    width: 85%;
+  @include tablets {
+    max-width: 688px;
+    @include grid-v(6, 20px);
+  }
+
+  @include phones{
+    max-width: 260px;
+    @include grid-v(2, 20px);
   }
 }

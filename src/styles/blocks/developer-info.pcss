@@ -1,6 +1,11 @@
 .developer-info {
     display: flex;
     align-items: flex-start;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
     
     &__desc {
         text-align: right;
@@ -8,6 +13,11 @@
         line-height: 30px;
         font-weight: 600;
         margin-right: 50px;
+
+        @include tablets {
+            text-align: center;
+            margin-right: 0;
+        }
     }
 
     &__name {
@@ -15,5 +25,9 @@
         line-height: 60px;
         font-weight: 800;
         text-align: left;
+
+        @include tablets {
+            text-align: center;
+        }
     }
 }

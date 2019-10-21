@@ -1,11 +1,6 @@
 section.reviews#reviews
     .container.reviews__container
         h2.title.reviews__title Что обо мне говорят
-        //.reviews__btns
-            button.reviews__prev(@click="previous()")
-                +icon("arrow-down", "reviews__prev-icon")
-            button.reviews__next(@click="туче()")
-                +icon("arrow-down", "reviews__next-icon")
         Flickity(ref="flickity" :options="flickityOptions").reviews__slider(style="display: flex")
             .carousel-cell
                 .review
@@ -19,38 +14,38 @@ section.reviews#reviews
                             .author__name Ковальчук Дмитрий
                             .author__business Основатель Loftschool
             .carousel-cell
-                    .reviews__item.review
-                        .review__left
-                            +icon("quote", "review__left-icon")
-                        .review__right
-                            article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                            .review__author.author
-                                .author__avatar.avatar
-                                    +image("content/user.jpg", "author__avatar-pic")
-                                .author__name Ковальчук Дмитрий
-                                .author__business Основатель Loftschool
+                .reviews__item.review
+                    .review__left
+                        +icon("quote", "review__left-icon")
+                    .review__right
+                        article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                        .review__author.author
+                            .author__avatar.avatar
+                                +image("content/user.jpg", "author__avatar-pic")
+                            .author__name Ковальчук Дмитрий
+                            .author__business Основатель Loftschool
             .carousel-cell
-                    .reviews__item.review
-                        .review__left
-                            +icon("quote", "review__left-icon")
-                        .review__right
-                            article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                            .review__author.author
-                                .author__avatar.avatar
-                                    +image("content/user.jpg", "author__avatar-pic")
-                                .author__name Ковальчук Дмитрий
-                                .author__business Основатель Loftschool
+                .reviews__item.review
+                    .review__left
+                        +icon("quote", "review__left-icon")
+                    .review__right
+                        article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                        .review__author.author
+                            .author__avatar.avatar
+                                +image("content/user.jpg", "author__avatar-pic")
+                            .author__name Ковальчук Дмитрий
+                            .author__business Основатель Loftschool
             .carousel-cell
-                    .reviews__item.review
-                        .review__left
-                            +icon("quote", "review__left-icon")
-                        .review__right
-                            article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                            .review__author.author
-                                .author__avatar.avatar
-                                    +image("content/user.jpg", "author__avatar-pic")
-                                .author__name Ковальчук Дмитрий
-                                .author__business Основатель Loftschool
+                .reviews__item.review
+                    .review__left
+                        +icon("quote", "review__left-icon")
+                    .review__right
+                        article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                        .review__author.author
+                            .author__avatar.avatar
+                                +image("content/user.jpg", "author__avatar-pic")
+                            .author__name Ковальчук Дмитрий
+                            .author__business Основатель Loftschool
             .carousel-cell
                 .reviews__item.review
                     .review__left
