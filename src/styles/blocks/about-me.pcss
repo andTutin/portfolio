@@ -1,6 +1,10 @@
 .about-me {
-    min-height: 620px;
+    min-height: 708px;
     color: #fff;
+
+    @include desktop {
+        min-height: 768px;
+    }
     
     &__container {
         grid-template-rows: 110px 1fr 150px;
@@ -9,12 +13,21 @@
     &__left {
         grid-column: 3 / 6;
         grid-row: 2 / 3;
+
+        @include desktop {
+            grid-column: 1 / 5;
+        }
     }
 
     &__right {
         grid-column: 6 / 11;
         grid-row: 2 / 3;
         padding: 0 25px 0 50px;
+
+        @include desktop {
+            grid-column: 6 / 12;
+            padding: 0;
+        }
     }
 
     &__hello {

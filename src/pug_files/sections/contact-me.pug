@@ -1,0 +1,17 @@
+section.contact-me#contact-me
+    .container.contact-me__container
+        h2.contact-me__title Связаться со мной
+        form.contact-me__form.form
+            .form__row
+                label.form__label.form__label--name
+                    span.form__label-title Введите ваше имя
+                    input(type="text" placeholder="Ковальчук Дмитрий" name="name" required autocomplete="off").form__input
+                label.form__label.form__label--email
+                    span.form__label-title Введите ваш email
+                    input(type="email" placeholder="loftschool@study.com" name="email" required autocomplete="off").form__input
+            .form__row
+                label.form__label.form__label--message
+                    span.form__label-title Сообщение к письму
+                    input(type="textarea" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена" name="message" required autocomplete="off").form__input
+            .form__row
+                button.form__button Отправить

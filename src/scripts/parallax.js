@@ -7,7 +7,7 @@ if (windowWidth > 768) {
         Array.from(layers).forEach((layer, index) => {
             if (index != 4) {
                 const transformY = `${scrollY / (-(Array.from(layers).length - index) * 10)}%`;
-                layer.style.transform = `translateY(${transformY})`;
+                layer.style.transform = `translateY(${transformY}) translateZ(0)`;
             }
         })
     })

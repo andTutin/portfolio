@@ -1,5 +1,5 @@
 .skills {
-    min-height: 1015px;
+    min-height: 1018px;
     position: relative;
     background: #fff;
     z-index: +10000;
@@ -8,8 +8,8 @@
         position: absolute;
         width: 471px;
         height: 1136px;
-        left: 210px;
-        bottom: 300px;
+        right: 64%;
+        bottom: 310px;
         content: "";
         background: url('../images/content/electric_guitar.png') center center no-repeat / contain;
     }
@@ -34,6 +34,10 @@
         grid-row: 2 / 3;
         @include grid-v(8, 30px);
         grid-template-rows: 47px 170px 1fr;
+
+        @include desktop {
+            grid-column: 4 / 13;
+        }
     }
 
     &__title {
@@ -64,6 +68,11 @@
         flex-direction: column;
         justify-content: flex-start;
         padding: 48px 96px 0 125px;
+        
+        @include desktop {
+            padding-right: 0px;
+            padding-left: 98px;
+        }
     }
 
     &__item:not(:last-child) {

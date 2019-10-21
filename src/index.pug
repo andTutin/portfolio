@@ -11,140 +11,34 @@ html(lang="en")
     .wrapper
       .welcome-section
 
-        .parallax 
-          .parallax__layer
-            +image("content/layer1.png", "parallax__image")
-          .parallax__layer
-            +image("content/layer2.png", "parallax__image")
-          .parallax__layer
-            +image("content/layer3.png", "parallax__image")
-          .parallax__layer
-            +image("content/layer4.png", "parallax__image")
-          .parallax__layer
-            +image("content/layer5.png", "parallax__image") 
+        include ./pug_files/sections/parallax
         
-        section.hero#main
-          .container.hero__container
-            header.header
-              .logo АТ
-              nav.header__menu
-                include ./components/menu
-              .header__socials
-                include ./components/socials
-            .hero__content
-              include ./components/developer-info
-            .hero__btns
-              .scrolldown-btn
-                a(href="#about-me").scrolldown-btn__link Скролл
-                  +icon("scroll", "scrolldown-btn__icon")
+        include ./pug_files/sections/hero
         
-        section.about-me#about-me
-          .container.about-me__container
-            .about-me__left.user
-              include ./components/user
-            .about-me__right
-              h4.about-me__hello Привет, меня зовут
-              h3.about-me__title Андрей Тутин
-              .about-me__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              .about-me__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        include ./pug_files/sections/about-me
             
-        include ./components/triangles
+        include ./pug_files/components/triangles
 
-      section.skills#skills
-        .container.skills__container
-          .skills__content
-            h2.title.skills__title Чем я могу быть полезен вам
-            .skills__text 
-              p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            include ./components/skills
+      include ./pug_files/sections/skills
           
-      section.portfolio#portfolio
-        .container.portfolio__container
-          h2.title.portfolio__title Мои работы
-          .portfolio__slider
-            .slider
-              .slider__fullsize(style="background: url('../src/images/content/1.jpg') left top no-repeat / cover")
-              .slider__controlls
-                ul.slider__previews 
-                  - for (var i = 1; i <= 4; i++)
-                    li.slider__previews-item(style='background: url(../src/images/content/' + `${i}` + '.jpg) left top no-repeat / cover')
-                .slider__btns
-                  button.slider__next
-                    +icon("arrow-down", "slider__next-icon")
-                  button.slider__prev
-                    +icon("arrow-down", "slider__prev-icon")
-          .portfolio__work
-            .work
-              .work__tags
-                .tags
-                  include ./components/tags
-              .work__title Сайт школы  образования
-              .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-              a.work__link(href="#" target="_blank")
-                +icon("link", "work__link-icon")
-                p Посмотреть сайт
+      include ./pug_files/sections/portfolio
 
       .guitarist-bg
 
-        section.reviews#reviews
-          .container.reviews__container
-            h2.title.reviews__title Что обо мне говорят
-            .reviews__btns
-              button.reviews__prev
-                +icon("arrow-down", "reviews__prev-icon")
-              button.reviews__next
-                +icon("arrow-down", "reviews__next-icon")
-            .reviews__slider
-              ul.reviews__list
-                li.reviews__item.review
-                  .review__left
-                    +icon("quote", "review__left-icon")
-                  .review__right
-                    article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                    .review__author.author
-                      .author__avatar.avatar
-                        +image("content/user.jpg", "author__avatar-pic")
-                      .author__name Ковальчук Дмитрий
-                      .author__business Основатель Loftschool
-                li.reviews__item.review
-                  .review__left
-                    +icon("quote", "review__left-icon")
-                  .review__right
-                    article.review__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                    .review__author.author
-                      .author__avatar.avatar
-                        +image("content/user.jpg", "author__avatar-pic")
-                      .author__name Ковальчук Дмитрий
-                      .author__business Основатель Loftschool
+        include ./pug_files/sections/reviews
 
-        section.contact-me#contact-me
-          .container.contact-me__container
-            h2.contact-me__title Связаться со мной
-            form.contact-me__form.form
-              .form__row
-                label.form__label.form__label--name
-                  span.form__label-title Введите ваше имя
-                  input(type="text" placeholder="Ковальчук Дмитрий" name="name" required autocomplete="off").form__input
-                label.form__label.form__label--email
-                  span.form__label-title Введите ваш email
-                  input(type="email" placeholder="loftschool@study.com" name="email" required autocomplete="off").form__input
-              .form__row
-                label.form__label.form__label--message
-                  span.form__label-title Сообщение к письму
-                  input(type="textarea" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена" name="message" required autocomplete="off").form__input
-              .form__row
-                button.form__button Отправить
+        include ./pug_files/sections/contact-me
 
       footer.footer
         .container.footer__container
           .footer__year © 2019
           .footer__developer-info
-            include ./components/developer-info
+            include ./pug_files/components/developer-info
           .footer__menu.menu
-            include ./components/menu
+            include ./pug_files/components/menu
           .footer__socials.socials
             ul.socials__list
-              include ./components/socials
+              include ./pug_files/components/socials
           .footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.
           quote.footer__quote 
             p Всегда пишите код так,будто сопровождать его будет склонный к насилию психопат, который знает где вы живёте
