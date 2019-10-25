@@ -16,6 +16,12 @@
         height: 198px;
     }
 
+    @include phones {
+        padding-left: 32px;
+        padding-right: 43px;
+        height: 180px;
+    }
+
     &:before {
         content: "";
         position: absolute;
@@ -42,6 +48,8 @@
             font-size: 14px;
             line-height: 24px;
         }
+
+
     }
 
     &__author {

@@ -10,6 +10,10 @@
                 padding: 109px 0 105px 0;
             }
 
+            @include phones {
+                padding: 93px 0 105px 0;
+            }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -37,6 +41,7 @@
             @include phones {
                 text-align: center;
                 font-size: 24px;
+                margin-bottom: 29px;
             }
     }
 
@@ -65,6 +70,7 @@
         }
 
         @include phones {
+            height: 185px;
             width: 100%;
         }
     }

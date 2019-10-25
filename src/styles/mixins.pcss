@@ -22,6 +22,12 @@
   }
 }
 
+@mixin minimum() {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
 @mixin grid-v($columns, $gap) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
