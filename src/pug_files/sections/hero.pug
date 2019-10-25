@@ -6,9 +6,25 @@ section.hero#main
                 include ../components/menu
             .header__socials
                 include ../components/socials
+            .hamburger
+                .hamburger__line
+                .hamburger__line
+                .hamburger__line
         .hero__content
-            include ../components/developer-info
+            h1.developer-info
+                span.developer-info__desc Личный сайт<br>веб разработчика 
+                span.developer-info__name Андрей<br>Тутин
         .hero__btns
             .scrolldown-btn
                 a(href="#about-me").scrolldown-btn__link Скролл
                     +icon("scroll", "scrolldown-btn__icon")
+        .popup-menu
+            nav.popup-menu__menu
+                include ../components/menu
+            .popup-menu__socials
+                include ../components/socials
+            .popup-menu__close
+                .close
+
+            
+

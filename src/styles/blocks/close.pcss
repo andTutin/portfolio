@@ -1,0 +1,28 @@
+.close {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0; 
+      right: 0;
+      height: 5px;
+      transform: translateY(-50%);
+      background-color: #414c63;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      transform: translateX(-50%);
+      background-color: #414c63;
+    }
+  
+}
