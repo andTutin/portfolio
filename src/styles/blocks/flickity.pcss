@@ -4,6 +4,7 @@ https://flickity.metafizzy.co
 
 .flickity-enabled {
   position: relative;
+  height: 100%;
 }
 
 .flickity-enabled:focus { outline: none; }
@@ -77,16 +78,39 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
-  top: -45%;
-  width: 55px;
-  height: 55px;
+  top: -52%;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   /* vertically center */
   transform: translateY(-50%);
+
+  @include tablets {
+    top: -40%;
+  }
 }
 
-.flickity-prev-next-button.previous { right: 280px; }
-.flickity-prev-next-button.next { right: 200px; }
+.flickity-prev-next-button.previous { 
+  right: 478px;
+
+    @include tablets {
+      right: 253px;
+    }
+
+
+    @include phones {
+      right: 60%;
+    }
+   }
+.flickity-prev-next-button.next { right: 400px; 
+
+    @include tablets {
+      right: 173px;
+    }
+   @include phones {
+     right: 40%;
+   }
+   }
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
@@ -102,8 +126,8 @@ https://flickity.metafizzy.co
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
 }
 
 /* ---- page dots ---- */

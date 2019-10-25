@@ -1,8 +1,23 @@
 .skills {
+    padding: 133px 0 145px 0;
     min-height: 1018px;
     position: relative;
     background: #fff;
     z-index: +10000;
+
+    @include desktop {
+        padding: 115px 0 143px 0;
+        min-height: 1000px;
+    }
+
+    @include tablets {
+        min-height: 1186px;
+        padding: 105px 0;
+    }
+
+    @include phones {
+        min-height: 1375px;
+    }
 
     &:after {
         position: absolute;
@@ -12,6 +27,28 @@
         bottom: 310px;
         content: "";
         background: url('../images/content/electric_guitar.png') center center no-repeat / contain;
+
+        @include desktop {
+            width: 22.4375rem;
+            height: 67rem;
+            right: 72%;
+            bottom: 10.375rem;
+        }
+
+        @include tablets {
+            transform: rotate(90deg);
+            width: 16.4375rem;
+            height: 67rem;
+            right: 31%;
+            bottom: -18.625rem;
+        }
+
+        @include phones {
+            width: 9.4375rem;
+            height: 63rem;
+            right: 5%;
+            bottom: -22.625rem;
+        }
     }
 
     &:before {
@@ -23,66 +60,158 @@
         content: "";
         background: url('../images/content/rocknroll.png') center center no-repeat / contain;
         opacity: .1;
+
+        @include desktop {
+            width: 37.5rem;
+            height: 31.25rem;
+            left: -12.875rem;
+            bottom: 5.625rem;
+        }
+
+        @include tablets {
+            width: 27.5rem;
+            height: 31.25rem;
+            left: 7.125rem;
+            bottom: -1.375rem;
+        }
+
+        @include phones {
+            width: 27.5rem;
+            height: 13.25rem;
+            left: -1.875rem;
+            bottom: 1.625rem;
+        }
+        
     }
 
     &__container {
-        grid-template-rows: 136px 1fr 145px;
+        @include grid-v(12, 30px);
+
+        @include tablets {
+           @include grid-v(6, 20px); 
+        }
+
+        @include phones {
+            @include grid-v(2, 20px);
+        }
     }
 
     &__content {
         grid-column: 5 / 13;
-        grid-row: 2 / 3;
-        @include grid-v(8, 30px);
-        grid-template-rows: 47px 170px 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
 
         @include desktop {
             grid-column: 4 / 13;
         }
+
+        @include tablets {
+            grid-column: 1 / 7;
+        }
+
+        @include phones {
+            grid-column: 1 / 3;
+        }
     }
 
     &__title {
-        grid-column: 1 / 7;
-        grid-row: 1 / 2;
         font-size: 30px;
         color: #100022;
         font-weight: 700;
+        margin-bottom: 47px;
+
+        @include tablets {
+            padding: 0 200px;
+            text-align: center;
+            padding-left: 209px;
+            padding-right: 193px;
+            line-height: 36px;
+            margin-bottom: 18px;
+        }
+
+        @include phones {
+            padding: 0;
+            text-align: left;
+        }
     }
 
     &__text {
-        grid-column: 1 / 6;
-        grid-row: 2 / 3;
-        display: flex;
-        align-items: center;
-        padding-right: 80px;
+        padding-right: 370px;
         font-size: 16px;
         line-height: 30px;
         color: #100022;
         font-weight: 600;
-        
+        margin-bottom: 84px;
+
+        @include desktop {
+            padding-right: 200px;
+        }
+
+        @include tablets {
+            font-size: 14px;
+            line-height: 24px;
+            color: #100022;
+            font-family: "Open Sans";
+            font-weight: 600;
+            text-align: center;
+            padding-left: 122px;
+            padding-right: 109px;
+            margin-bottom: 52px;
+        }
+
+        @include phones {
+            padding: 0;
+            text-align: left;
+        }
     }
 
     &__list {
-        grid-column: 1 / 9;
-        grid-row: 3 / 4;
+        width: 100%;
+        padding: 0 89px 0 123px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 48px 96px 0 125px;
-        
+
         @include desktop {
-            padding-right: 0px;
-            padding-left: 98px;
+            padding-left: 97px;
+            padding-right: 8px;
         }
+
+        @include tablets {
+            padding-left: 54px;
+            padding-right: 50px;
+            align-items: center;
+        }
+
+        @include phones {
+            padding: 0;
+        }
+    }
+
+    &__item {
+        width: 100%;
+
     }
 
     &__item:not(:last-child) {
         margin-bottom: 47px;
+
+        @include tablets {
+            margin-bottom: 35px;
+        }
     }
 
     &__list li ul {
         display: flex;
         justify-content: space-between;
+
+        @include phones {
+            flex-flow: row wrap;
+        }
     }
+
 
     &__item-title {
         font-size: 24px;
@@ -90,6 +219,15 @@
         font-weight: 700;
         margin-bottom: 30px;
         text-transform: capitalize;
+
+        @include tablets {
+            text-align: center;
+            font-size: 18px;
+            color: #100022;
+            font-family: "Open Sans";
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -98,8 +236,6 @@
     width: 150px;
     height: 150px;
 }
-
-
 
 .skill__title {
     position: absolute;
@@ -111,7 +247,6 @@
     color: #100022;
     font-weight: 700;
 }
-
 
 .skill__shape {
     width: 100%;

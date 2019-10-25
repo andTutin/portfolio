@@ -1,18 +1,11 @@
 .header {
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
+    align-self: stretch;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include tablets {
-      grid-column: 1 / 7;
-      grid-row: 1 / 2;
-    }
-
   &__menu {
-    width: 690px;
-    flex-shrink: 0;
+    flex-basis: 690px;
 
     @include tablets {
       display: none;
@@ -20,20 +13,30 @@
   }
 
   &__socials {
-    width: 165px;
+    flex-basis: 165px;
+
+    @include desktop {
+      flex-basis: 150px;
+    }
 
     @include tablets {
+      margin-right: 115px;
+      flex-basis: 160px;
+    }
+
+    @include phones {
       display: none;
     }
   }
 
   &__socials .socials__item {
     border: transparent;
+    width: 24px;
+    height: 24px;
 
     &:hover {
       border: transparent;
     }
-
   }
 }
 

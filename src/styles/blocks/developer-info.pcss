@@ -1,6 +1,7 @@
 .developer-info {
     display: flex;
     align-items: flex-start;
+    
 
     @include tablets {
       flex-direction: column;
@@ -17,6 +18,23 @@
         @include tablets {
             text-align: center;
             margin-right: 0;
+            font-size: 16px;
+            line-height: 30px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @include phones {
+            font-size: 14px;
+            line-height: 24px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 4px;
         }
     }
 
@@ -27,6 +45,21 @@
         text-align: left;
 
         @include tablets {
+            text-align: center;
+            font-size: 48px;
+            line-height: 48px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-weight: 800;
+            text-align: center;
+        }
+
+        @include phones {
+            font-size: 36px;
+            line-height: 48px;
+            color: #ffffff;
+            font-family: "Open Sans";
+            font-weight: 800;
             text-align: center;
         }
     }

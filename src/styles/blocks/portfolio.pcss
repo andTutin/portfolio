@@ -1,27 +1,91 @@
 .portfolio {
     background: #f8f8f8;
-    min-height: 981px;
+    padding: 137px 0 152px 0;
+
+            @include desktop {
+                padding: 128px 0 146px 0;
+            }
+
+            @include tablets {
+                padding: 109px 0 105px 0;
+            }
 
     &__container {
-        grid-template-rows: 135px 140px 550px 155px;
+        display: flex;
+        flex-direction: column;
+
+            @include phones {
+                min-width: 100%;
+            }
     }
 
     &__title {
-        grid-row: 2 / 3;
-        grid-column: 1 / 4;
         font-size: 36px;
         color: #333c49;
         font-weight: 700;
+        margin-bottom: 90px;
+
+            @include desktop {
+                margin-bottom: 59px;
+            }
+
+            @include tablets {
+                font-size: 30px;
+                margin-bottom: 52px;
+            }
+
+            @include phones {
+                text-align: center;
+                font-size: 24px;
+            }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablets {
+            flex-direction: column;
+        }
     }
 
     &__slider {
-        grid-row: 3 / 4;
-        grid-column: 1 / 9;
+        height: 549px;
+        width: 975px;
+
+        @include desktop {
+            height: 354px;
+            width: 624px;
+        }
+
+        @include tablets {
+            height: 353px;
+            width: 629px;
+            margin-bottom: 60px;
+        }
+
+        @include phones {
+            width: 100%;
+        }
     }
 
     &__work {
-        grid-row: 3 / 4;
-        grid-column: 10 / 13;
+        width: 347px;
+
+        @include desktop {
+            width: 333px;
+        }
+
+        @include tablets {
+            width: 450px;
+            align-self: center;
+        }
+
+        @include phones {
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
     }
 
 }

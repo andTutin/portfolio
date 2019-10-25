@@ -1,5 +1,14 @@
 import Flickity from 'vue-flickity';
 import Vue from 'vue';
+
+var groupCells;
+var wWidth = document.body.clientWidth;
+
+if (wWidth < 481) {
+  groupCells = 1;
+} else {
+  groupCells = 2;
+}
  
 new Vue({
     el: '.reviews__slider',
@@ -14,7 +23,7 @@ new Vue({
         prevNextButtons: true,
         pageDots: false,
         wrapAround: false,
-        groupCells: 2,
+        groupCells: groupCells,
         draggable: false,
         cellAlign: 'left'
       }

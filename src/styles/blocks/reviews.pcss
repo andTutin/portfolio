@@ -1,67 +1,50 @@
 .reviews {
-    min-height: 618px;
     color: #333c49;
+    padding: 138px 0 190px 0;
+
+    @include tablets {
+        padding: 123px 0 115px 0;
+    }
 
     &__container {
-        grid-template-rows: 130px 73px 65px 250px 100px;
-    }
-
-    &__title {
-        grid-row: 2 / 3;
-        grid-column: 1 / 5;
-        font-size: 36px;
-        color: #fff;
-        font-weight: 700;
-    }
-
-    &__btns {
-        grid-row: 2 / 3;
-        grid-column: 5 / 7;
-        display: grid;
-    }
-
-    &__prev {
-        width: 60px;
-        height: 60px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        background: none;
-        grid-column: 1 / 2;
-        border-radius: 50%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
 
-        &-icon {
-            transform: rotate(180deg);
-            width: 15px;
-            height: 15px;
-            fill: #fff;
+        @include phones {
+            min-width: 100%;
         }
     }
 
-    &__next {
-        width: 60px;
-        height: 60px;
-        border: 2px solid #fff;
-        border-radius: 50%;
-        grid-column: 2 / 3;
-        background: none;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__title {
+        font-size: 36px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 90px;
 
-        &-icon {
-            width: 20px;
-            height: 20px;
-            fill: #fff;
+        @include tablets {
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+
+        @include phones {
+            text-align: center;
+            margin-bottom: 150px;
         }
     }
 
     &__slider {
-        grid-row: 4 / 5;
-        grid-column: 1 / 9;
+        height: 218px;
+        width: 1010px;
+
+        @include tablets {
+            height: 196px;
+            width: 704px;
+        }
+
+        @include phones {
+            margin: 0 auto;
+            width: 352px;
+        }
     }
 
     &__list {

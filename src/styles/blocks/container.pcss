@@ -3,19 +3,16 @@
   height: 100%;
   max-width: 1480px;
   width: 95%;
-  @include grid-v(12, 30px);
 
-  @include desktop {
-    max-width: 1080px;
-  }
+    @include desktop {
+      max-width: 1080px;
+    }
 
-  @include tablets {
-    max-width: 688px;
-    @include grid-v(6, 20px);
-  }
+    @include tablets {
+      max-width: 688px;
+    }
 
-  @include phones{
-    max-width: 260px;
-    @include grid-v(2, 20px);
-  }
+    @include phones{
+      width: 100%;
+    }
 }

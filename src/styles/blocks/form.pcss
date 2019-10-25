@@ -6,17 +6,43 @@
 
     &__row {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        margin-bottom: 28px;
+
+        @include phones {
+            width: 100%;
+            flex-flow: row wrap;
+        }
+
+        &--textarea {
+            margin-bottom: 94px;
+        }
+
+        &--button {
+            margin-bottom: 0;
+
+            @include tablets {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 
     &__label {
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 10px 45px;
-        margin-right: 50px;
+        padding: 10px 15px 10px 45px;
         border-bottom: 1px solid rgba(#fff, 1);
         position: relative;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+
+            @include phones {
+                margin-right: 0;
+            }
+        }
 
         &--name {
             &:after {
@@ -60,15 +86,15 @@
 
 
         &-title {
+            margin-bottom: 14px;
             font-size: 16px;
             font-weight: 600;
         }
     }
 
     &__input {
-        margin-top: 30px;
         border: none;
-        padding: 10px 0;
+        padding: 10px 0 12px 0;
         color: #fff;
         font-size: 18px;
         font-weight: 700;

@@ -1,25 +1,25 @@
 section.portfolio#portfolio
     .container.portfolio__container
         h2.title.portfolio__title Мои работы
-        .portfolio__slider
-            .slider
-                .slider__fullsize(style="background: url('../src/images/content/1.jpg') left top no-repeat / cover")
-                .slider__controlls
+        .portfolio__content
+            .portfolio__slider
+                .slider
+                    .slider__fullsize(style="background: url('../src/images/content/1.jpg') left top no-repeat / cover")
                     ul.slider__previews 
                         - for (var i = 1; i <= 4; i++)
                             li.slider__previews-item(style='background: url(../src/images/content/' + `${i}` + '.jpg) left top no-repeat / cover')
-                                .slider__btns
-                    button.slider__next
-                        +icon("arrow-down", "slider__next-icon")
-                    button.slider__prev
-                        +icon("arrow-down", "slider__prev-icon")
-        .portfolio__work
-            .work
-                .work__tags
-                    .tags
-                        include ../components/tags
-                .work__title Сайт школы  образования
-                .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                a.work__link(href="#" target="_blank")
-                    +icon("link", "work__link-icon")
-                    p Посмотреть сайт
+                    .slider__btns
+                        button.slider__next
+                            +icon("arrow-down", "slider__next-icon")
+                        button.slider__prev
+                            +icon("arrow-down", "slider__prev-icon")
+            .portfolio__work
+                .work
+                    .work__tags
+                        .tags
+                            include ../components/tags
+                    .work__title Сайт школы  образования
+                    .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                    a.work__link(href="#" target="_blank")
+                        +icon("link", "work__link-icon")
+                        p Посмотреть сайт

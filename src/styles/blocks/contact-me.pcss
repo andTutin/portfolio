@@ -1,20 +1,37 @@
 .contact-me {
-    min-height: 770px;
     color: #fff;
+    padding: 0 0 146px 0;
+
+    @include desktop {
+       padding: 0 0 167px 0; 
+    }
 
     &__container {
-        grid-template-rows: 114px 105px 405px 144px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__title {
-        grid-column: 1 / 5;
-        grid-row: 2 / 3;
         font-size: 36px;
         font-weight: 700;
+        margin-bottom: 70px;
+
+        @include tablets {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 32px;
+        }
     }
 
     &__form {
-        grid-column: 1 / 8;
-        grid-row: 3 / 4;
+        width: 868px;
+
+        @include tablets {
+            width: 688px;
+        }
+
+        @include phones {
+            width: 100%;
+        }
     }
 }
