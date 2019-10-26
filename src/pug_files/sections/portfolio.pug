@@ -17,7 +17,10 @@ section.portfolio#portfolio
                 .work
                     .work__tags
                         .tags
-                            include ../components/tags
+                            - var tags = ['HTML', 'CSS', 'Javascript']
+                            ul.tags__list
+                                each tag in tags
+                                    li.tags__item #{tag}
                     .work__title Сайт школы  образования
                     .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
                     a.work__link(href="#" target="_blank")

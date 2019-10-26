@@ -2,33 +2,20 @@
     display: none;
     position: absolute;
     width: 323px;
-    height: 810px;
+    height: 100%;
     background: white;
     padding: 216px 93px 225px 66px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
-    @include phones {
-        display: flex;
+    @include tablets {
+        display: none;
         top: 0;
         right: 0;
     }
 
-    &__menu .menu__list {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__menu .menu__item {
-        margin-bottom: 0;
-    }
-
-    &__menu .menu__link {
-        font-size: 18px;
-        line-height: 48px;
-        color: #414c63;
-        font-family: "Open Sans";
-        font-weight: 600;
+    &__menu {
+        margin-bottom: 50px;
     }
 
     &__close {
@@ -38,5 +25,11 @@
         height: 24px;
         width: 24px;
         transform: rotate(45deg);
+    }
+
+    &__socials .socials__item {
+        border: transparent;
+        width: 24px;
+        height: 24px;
     }
 }

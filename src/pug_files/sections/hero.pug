@@ -1,28 +1,83 @@
 section.hero#main
     .container.hero__container
         header.header
+
             .logo АТ
+
             nav.header__menu
-                include ../components/menu
+                -
+                    var menuItems = [
+                            {'text': 'Главная','id':'main'},
+                            {'text':'Обо мне', 'id': 'about-me'},
+                            {'text': 'Навыки', 'id': 'skills'},
+                            {'text': 'Работы', 'id': 'portfolio'},
+                            {'text': 'Отзывы', 'id': 'reviews'},
+                            {'text': 'Связаться', 'id': 'contact-me'}
+                        ]
+                .menu.menu--header
+                    ul.menu__list
+                        each item in menuItems
+                            li.menu__item
+                                a(href="#"+`${item.id}`).menu__link= item.text
+
             .header__socials
-                include ../components/socials
+                -
+                    var socialsItems = [
+                            {"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"},
+                            {"icon": 'vk', 'link': "https://vk.com/and.tutin"},
+                            {"icon": "github", 'link': "https://github.com/andTutin"}
+                        ]
+                .socials.socials--header
+                    ul.socials__list
+                        each item in socialsItems
+                            li.socials__item
+                                a(href=item.link).socials__link
+                                    +icon(item.icon, "socials__icon")
+            
             .hamburger
                 .hamburger__line
                 .hamburger__line
                 .hamburger__line
+        
         .hero__content
             h1.developer-info
                 span.developer-info__desc Личный сайт<br>веб разработчика 
                 span.developer-info__name Андрей<br>Тутин
+        
         .hero__btns
             .scrolldown-btn
                 a(href="#about-me").scrolldown-btn__link Скролл
                     +icon("scroll", "scrolldown-btn__icon")
+        
         .popup-menu
             nav.popup-menu__menu
-                include ../components/menu
+                -
+                    var menuItems = [
+                            {'text': 'Главная','id':'main'},
+                            {'text':'Обо мне', 'id': 'about-me'},
+                            {'text': 'Навыки', 'id': 'skills'},
+                            {'text': 'Работы', 'id': 'portfolio'},
+                            {'text': 'Отзывы', 'id': 'reviews'},
+                            {'text': 'Связаться', 'id': 'contact-me'}
+                        ]
+                .menu.menu--popup
+                    ul.menu__list
+                        each item in menuItems
+                            li.menu__item
+                                a(href="#"+`${item.id}`).menu__link= item.text
             .popup-menu__socials
-                include ../components/socials
+                -
+                    var socialsItems = [
+                            {"icon": 'insta', 'link': "https://www.instagram.com/and.tutin"},
+                            {"icon": 'vk', 'link': "https://vk.com/and.tutin"},
+                            {"icon": "github", 'link': "https://github.com/andTutin"}
+                        ]
+                .socials  
+                    ul.socials__list
+                        each item in socialsItems
+                            li.socials__item
+                                a(href=item.link).socials__link
+                                    +icon(item.icon, "socials__icon")
             .popup-menu__close
                 .close
 

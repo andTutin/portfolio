@@ -1,33 +1,36 @@
 .header {
-    align-self: stretch;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-  &__menu {
-    flex-basis: 690px;
 
-    @include tablets {
-      display: none;
-    }
-  }
+    &__menu {
+      flex-basis: 690px;
 
-  &__socials {
-    flex-basis: 165px;
-
-    @include desktop {
-      flex-basis: 150px;
+      @include tablets {
+        display: none;
+      }
     }
 
-    @include tablets {
-      margin-right: 115px;
-      flex-basis: 160px;
-    }
+    &__socials {
+      flex-basis: 165px;
 
-    @include phones {
-      display: none;
+      @include desktop {
+        flex-basis: 150px;
+      }
+
+      @include tablets {
+        margin-right: 88px;
+        flex-basis: 160px;
+        margin-left: auto;
+      }
+
+      @include phones {
+        display: none;
+      }
     }
-  }
 
   &__socials .socials__item {
     border: transparent;
@@ -39,4 +42,3 @@
     }
   }
 }
-

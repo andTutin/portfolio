@@ -2,7 +2,20 @@ section.about-me#about-me
     .container.about-me__container
         .about-me__left
             .user
-                include ../components/user
+                .user__avatar
+                    .avatar
+                        +image("content/user.jpg", "avatar__pic")
+                -
+                    var infoItems = [
+                        ['Проживаю:', 'Санкт-Петербург'],
+                        ['Возраст:', '32'],
+                        ['Родился:', 'Гатчина']
+                    ]
+                ul.user__info
+                    each item in infoItems
+                        li.user__info-item
+                            .user__key #{item[0]}
+                            .user__value #{item[1]}
         .about-me__right
             h4.about-me__hello Привет, меня зовут
             h3.about-me__title Андрей Тутин
