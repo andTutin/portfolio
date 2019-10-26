@@ -1,12 +1,13 @@
 .header {
-    width: 100%;
+    align-self: stretch;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-
     &__menu {
+      margin-right: 25px;
+      margin-left: 25px;
       flex-basis: 690px;
 
       @include tablets {
@@ -15,7 +16,7 @@
     }
 
     &__socials {
-      flex-basis: 165px;
+        flex-basis: 165px;
 
       @include desktop {
         flex-basis: 150px;

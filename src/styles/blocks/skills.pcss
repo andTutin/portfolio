@@ -10,6 +10,7 @@
 
     @include tablets {
         padding: 105px 0;
+        padding-bottom: 453px;
     }
 
     @include phones {
@@ -184,8 +185,8 @@
         }
 
         @include tablets {
-            padding-left: 54px;
-            padding-right: 50px;
+            padding-left: 8px;
+            padding-right: 8px;
             align-items: center;
         }
 
@@ -211,8 +212,9 @@
         display: flex;
         justify-content: space-between;
 
-        @include phones {
+        @include desktop {
             flex-flow: row wrap;
+            justify-content: space-between;
         }
     }
 
@@ -222,7 +224,6 @@
         color: #100022;
         font-weight: 700;
         margin-bottom: 30px;
-        text-transform: capitalize;
 
         @include tablets {
             text-align: center;

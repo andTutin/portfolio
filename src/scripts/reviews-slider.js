@@ -28,15 +28,5 @@ new Vue({
         cellAlign: 'left'
       }
     }
-  },
-  
-  methods: {
-    next() {
-      this.$refs.flickity.next();
-    },
-    
-    previous() {
-      this.$refs.flickity.previous();
-    }
   }
 });

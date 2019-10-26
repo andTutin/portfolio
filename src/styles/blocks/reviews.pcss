@@ -2,9 +2,9 @@
     color: #333c49;
     padding: 138px 0 190px 0;
 
-    @include tablets {
-        padding: 123px 0 115px 0;
-    }
+        @include tablets {
+            padding: 123px 0 115px 0;
+        }
 
     &__container {
         display: flex;
@@ -38,22 +38,18 @@
     }
 
     &__slider {
-        height: 218px;
-        width: 1010px;
+        max-width: 1010px;
 
         @include tablets {
-            height: 196px;
-            width: 704px;
+            max-width: 704px;
         }
 
         @include phones {
-            margin: 0 auto;
-            width: 352px;
+            max-width: 100%;
         }
     }
 
     &__list {
         display: flex;
-        height: 100%;
     }
 }

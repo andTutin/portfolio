@@ -17,28 +17,28 @@ new Vue({
         return {
             skills: [
                 {
-                    "category": "frontend",
+                    "category": "Front-end",
                     "tech": [
                         {
-                            "title": 'HTML',
+                            "title": 'HTML5',
                             "percent": 90
                         },
                         {
-                            "title": 'CSS',
+                            "title": 'CSS3',
                             "percent": 13
                         },
                         {
                             "title": 'Javascript',
-                            "percent": 75
+                            "percent": 13
                         },
                         {
                             "title": 'JQuery & Vue.js',
-                            "percent": 25
+                            "percent": 13
                         }
                     ]
                 },
                 {
-                    "category": "workflow",
+                    "category": "Workflow",
                     "tech": [
                         {
                             "title": 'GIT',

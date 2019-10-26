@@ -8,7 +8,7 @@ section.skills#skills
 
 script(type="text/x-template")#skills-list-template
     ul.skills__list
-        li.skills__item(v-for="cat in skills" :class="cat.category")
+        li.skills__item(v-for="cat in skills")
             categoryRow(:cat="cat")
 
 script(type="text/x-template")#category-row-template

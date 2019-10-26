@@ -1,6 +1,5 @@
 .review {
-    width : 505px;
-    height: 100%;
+    min-height: 218px;
     padding-left: 125px;
     padding-right: 53px;
     display: flex;
@@ -9,18 +8,17 @@
     position: relative;
     color: #fff;
 
-    @include tablets {
-        padding-left: 41px;
-        width: 352px;
-        padding-right: 0px;
-        height: 198px;
-    }
+        @include tablets {
+            padding-left: 41px;
+            padding-right: 0px;
+            min-height: 198px;
+        }
 
-    @include phones {
-        padding-left: 32px;
-        padding-right: 43px;
-        height: 180px;
-    }
+        @include phones {
+            padding-left: 32px;
+            padding-right: 43px;
+            min-height: 180px;
+        }
 
     &:before {
         content: "";
@@ -31,23 +29,24 @@
         height: 75px;
         background: svg-load('quote.svg', fill=rgba(#fff, .075), width=75px, height=75px) center center no-repeat / cover;
 
-        @include tablets {
-            top: 5px;
-            left: 0;
-            width: 30px;
-            height: 30px;
-        }
+            @include tablets {
+                top: 5px;
+                left: 0;
+                width: 30px;
+                height: 30px;
+            }
     }
 
     &__text {
         font-size: 16px;
         line-height: 30px;
         font-weight: 600; 
+        margin-bottom: 20px;
 
-        @include tablets {
-            font-size: 14px;
-            line-height: 24px;
-        }
+            @include tablets {
+                font-size: 14px;
+                line-height: 24px;
+            }
 
 
     }

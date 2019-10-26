@@ -12,7 +12,7 @@ https://flickity.metafizzy.co
 .flickity-viewport {
   overflow: hidden;
   position: relative;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
@@ -78,7 +78,7 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
-  top: -52%;
+  top: -120px;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -86,33 +86,34 @@ https://flickity.metafizzy.co
   transform: translateY(-50%);
 
   @include tablets {
-    top: -40%;
+    top: -77px;
   }
 
   @include phones {
-    top: -27%;
+    top: -50px;
   }
 }
 
 .flickity-prev-next-button.previous { 
-  right: 478px;
+  left: 480px;
 
     @include tablets {
-      right: 253px;
+      left: 370px;
     }
 
 
     @include phones {
-      right: 60%;
+      left: 40%;
     }
    }
-.flickity-prev-next-button.next { right: 400px; 
+.flickity-prev-next-button.next { 
+  left: 558px; 
 
     @include tablets {
-      right: 173px;
+      left: 470px;
     }
    @include phones {
-     right: 40%;
+     left: 60%;
    }
    }
 /* right to left */
@@ -165,6 +166,11 @@ https://flickity.metafizzy.co
 }
 
 .carousel-cell {
-    height: 100%;
+    width: 50%;
+    height: max-content;
     opacity: 1;
+
+    @include phones {
+      width: 100%;
+    }
 }

@@ -32,14 +32,15 @@
     }
 
     &__form {
-        width: 868px;
+        width: 100%;
+        max-width: 868px;
 
         @include tablets {
-            width: 688px;
+            max-width: 688px;
         }
 
         @include phones {
-            width: 100%;
+            max-width: 100%;
         }
     }
 }

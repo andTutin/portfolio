@@ -55,12 +55,14 @@
     }
 
     &__slider {
+        z-index: +5;
         height: 549px;
         width: 975px;
 
         @include desktop {
             height: 354px;
             width: 624px;
+            margin-right: 100px;
         }
 
         @include tablets {
@@ -76,6 +78,7 @@
     }
 
     &__work {
+        z-index: +10;
         width: 347px;
 
         @include desktop {
