@@ -8,7 +8,8 @@ script(type="text/x-template")#portfolio-content-template
         slider(
             :works="works"
             :currentWork="currentWork"
-            @slide="handleSlide"
+            @buttonClick="handleButtonClick"
+            @previewClick="handlePreviewClick"
         )
         work(
             :currentWork="currentWork"
@@ -22,9 +23,10 @@ script(type="text/x-template")#slider-template
                 previews(
                     :works="works"
                     :currentWork="currentWork"
+                    @previewClick="$emit('previewClick', $event)"
                 )
                 buttons(
-                    @slide="$emit('slide', $event)"
+                    @buttonClick="$emit('buttonClick', $event)"
                 )
 
 script(type="text/x-template")#previews-template
@@ -33,7 +35,8 @@ script(type="text/x-template")#previews-template
             :key="work.photo"
             :class="{active: work.id === currentWork.id}"
             ).slider__previews-item
-            a(style="width: 25%").slider__previews-link
+            a(style="width: 25%"
+                @click.prevent="$emit('previewClick', work.id)").slider__previews-link
                 img(:src="work.photo" style="width: 100%").slider__previews-image
 
 script(type="text/x-template")#work-template
@@ -56,7 +59,7 @@ script(type="text/x-template")#tags-template
 
 script(type="text/x-template")#buttons-template
     .slider__btns
-        button(@click.prevent="$emit('slide', 'next')").slider__next
+        button(@click.prevent="$emit('buttonClick', 'next')").slider__next
             +icon("arrow-down", "slider__next-icon")
-        button(@click.prevent="$emit('slide', 'prev')").slider__prev
+        button(@click.prevent="$emit('buttonClick', 'prev')").slider__prev
             +icon("arrow-down", "slider__prev-icon")

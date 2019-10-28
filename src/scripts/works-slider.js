@@ -67,7 +67,7 @@ new Vue({
                 return item;
             })
         },
-        handleSlide(direction) {
+        handleButtonClick(direction) {
             switch(direction) {
                 case "next": 
                     this.currentIndex++;
@@ -76,6 +76,9 @@ new Vue({
                     this.currentIndex--;
                     break;
             }
+        },
+        handlePreviewClick(previewId) {
+            this.currentIndex = previewId - 1;
         }
     },
     created () {
