@@ -6,7 +6,7 @@
 
     &:after {
         position: absolute;
-        content: "2";
+        content: attr(data-slide);
         top: 35px;
         left: 93%;
         font-size: 400px;
@@ -74,9 +74,14 @@
         }
 
         &-item {
-            flex: 1;
+            width: 25%;
             height: 100%;
             cursor: pointer;
+        }
+
+        .active {
+            outline: 2px solid orange;
+             outline-offset: -2px;
         }
     }
 
@@ -115,6 +120,7 @@
             fill: #727883;
         }
     }
+
 
     &__prev {
         flex: 1;

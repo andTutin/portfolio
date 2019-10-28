@@ -1,28 +1,62 @@
 section.portfolio#portfolio
     .container.portfolio__container
         h2.title.portfolio__title Мои работы
-        .portfolio__content
-            .portfolio__slider
-                .slider
-                    .slider__fullsize(style="background: url('../src/images/content/1.jpg') left top no-repeat / cover")
-                    ul.slider__previews 
-                        - for (var i = 1; i <= 4; i++)
-                            li.slider__previews-item(style='background: url(../src/images/content/' + `${i}` + '.jpg) left top no-repeat / cover')
-                    .slider__btns
-                        button.slider__next
-                            +icon("arrow-down", "slider__next-icon")
-                        button.slider__prev
-                            +icon("arrow-down", "slider__prev-icon")
-            .portfolio__work
-                .work
-                    .work__tags
-                        .tags
-                            - var tags = ['HTML', 'CSS', 'Javascript']
-                            ul.tags__list
-                                each tag in tags
-                                    li.tags__item #{tag}
-                    .work__title Сайт школы  образования
-                    .work__decsription Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                    a.work__link(href="#" target="_blank")
-                        +icon("link", "work__link-icon")
-                        p Посмотреть сайт
+        #works-slider
+
+script(type="text/x-template")#portfolio-content-template
+    .portfolio__content
+        slider(
+            :works="works"
+            :currentWork="currentWork"
+            @slide="handleSlide"
+        )
+        work(
+            :currentWork="currentWork"
+        )
+
+script(type="text/x-template")#slider-template
+    .portfolio__slider
+        .slider(:data-slide="currentWork.id")
+            .slider__fullsize
+                img(:src="currentWork.photo" style="width: 100%")
+                previews(
+                    :works="works"
+                    :currentWork="currentWork"
+                )
+                buttons(
+                    @slide="$emit('slide', $event)"
+                )
+
+script(type="text/x-template")#previews-template
+    ul.slider__previews
+        li(v-for="work in works" 
+            :key="work.photo"
+            :class="{active: work.id === currentWork.id}"
+            ).slider__previews-item
+            a(style="width: 25%").slider__previews-link
+                img(:src="work.photo" style="width: 100%").slider__previews-image
+
+script(type="text/x-template")#work-template
+    .portfolio__work
+        .work
+            tags(
+                :tags="tagsArray"
+            )
+            .work__title {{currentWork.title}}
+            .work__decsription {{currentWork.desc}}
+            a.work__link(:href="currentWork.link" target="_blank")
+                +icon("link", "work__link-icon")
+                p Посмотреть сайт 
+
+script(type="text/x-template")#tags-template
+    .work__tags
+        .tags
+            ul.tags__list
+                li(v-for="tag in tags").tags__item {{tag}}
+
+script(type="text/x-template")#buttons-template
+    .slider__btns
+        button(@click.prevent="$emit('slide', 'next')").slider__next
+            +icon("arrow-down", "slider__next-icon")
+        button(@click.prevent="$emit('slide', 'prev')").slider__prev
+            +icon("arrow-down", "slider__prev-icon")

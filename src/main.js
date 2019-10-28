@@ -6,3 +6,4 @@ import "./scripts/skills";
 import "./scripts/parallax";
 import "./scripts/reviews-slider";
 import "./scripts/popup-menu";
+import "./scripts/works-slider";
