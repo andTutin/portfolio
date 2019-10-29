@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43" width="43" height="43">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-512 -605L688 -605L688 523L-512 523Z" />
+		</clipPath>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="-11.026" y1="17.148" x2="28.974" y2="17.148">
+			<stop offset="0" stop-color="#0069ec"  />
+			<stop offset="1" stop-color="#3f34cb"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+	</style>
+	<g id="About" clip-path="url(#cp1)">
+		<g id="3">
+			<g id="Добавить">
+				<g id="Кнопка">
+					<path id="Эллипс 643" class="shp0" d="M22 2C33.05 2 42 10.95 42 22C42 33.05 33.05 42 22 42C10.95 42 2 33.05 2 22C2 10.95 10.95 2 22 2Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
