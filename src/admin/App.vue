@@ -14,19 +14,18 @@
       .container.nav__container
         ul.nav__list
           li.nav__item.active
-            a.nav__link Обо мне
+            a.nav__link.link Обо мне
           li.nav__item
             a.nav__link Работы
           li.nav__item
             a.nav__link Отзывы
-    section.about
+    section.section.about
       .container.about__container
-        .about__header
+        .section__header
           h2.section-title.about__title Блок «Обо мне»
-          a.about__link
+          a.about__link.link Добавить группу
             .about__link-logo
-                img(src="../images/content/ellipse.png").about__link-img
-            p Добавить группу
+              .add-button
         .about__content
           .categories
             ul.categories__list
@@ -35,64 +34,27 @@
                   .category-card__header
                     input(type="text" placeholder="Название новой группы").category-card__title
                     a.category-card__confirm-btn
-                      img(src="../images/content/tick.png").category-card__confirm-img
+                      .confirm-button
                     a.category-card__decline-btn 
-                      img(src="../images/content/cross.png").category-card__decline-img
+                      .decline-button
                   .category-card__skills
                     .skills
                       ul.skills__list
-                      //-
-                        li.skills__item
-                          .skill
-                            input(type="text" placeholder="Git").skill__name
-                            input(type="text" placeholder="100").skill__percent
-                            span %
-                            a.skill__edit-btn
-                              img(src="../images/content/ellipse.png").skill__edit-img
-                            a.skill__delete-btn
-                              img(src="../images/content/ellipse.png").skill__delete-img
-                        li.skills__item
-                          .skill
-                            input(type="text" placeholder="Terminal").skill__name
-                            input(type="text" placeholder="100").skill__percent
-                            span %
-                            a.skill__edit-btn
-                              img(src="../images/content/ellipse.png").skill__edit-img
-                            a.skill__delete-btn
-                              img(src="../images/content/ellipse.png").skill__delete-img
-                        li.skills__item
-                          .skill
-                            input(type="text" placeholder="Gulp").skill__name
-                            input(type="text" placeholder="100").skill__percent
-                            span %
-                            a.skill__edit-btn
-                              img(src="../images/content/ellipse.png").skill__edit-img
-                            a.skill__delete-btn
-                              img(src="../images/content/ellipse.png").skill__delete-img
-                        li.skills__item
-                          .skill
-                            input(type="text" placeholder="Webpack").skill__name
-                            input(type="text" placeholder="100").skill__percent
-                            span %
-                            a.skill__edit-btn
-                              img(src="../images/content/ellipse.png").skill__edit-img
-                            a.skill__delete-btn
-                              img(src="../images/content/ellipse.png").skill__delete-img
                   .category-card__footer
                     .new-skill
                       input(type="text" placeholder="Новый навык").new-skill__name
                       input(type="text" placeholder="100").new-skill__percent
                       span %
                       a.new-skill__add-btn
-                        img(src="../images/content/ellipse.png").new-skill__add-img
+                        .add-button
               li.categories__item
                 .category-card
                   .category-card__header
                     input(type="text" placeholder="Workflow").category-card__title
                     a.category-card__confirm-btn
-                      img(src="../images/content/tick.png").category-card__confirm-img
+                      .confirm-button
                     a.category-card__decline-btn 
-                      img(src="../images/content/cross.png").category-card__decline-img
+                      .decline-button
                   .category-card__skills
                     .skills
                       ul.skills__list
@@ -102,53 +64,53 @@
                             input(type="text" placeholder="100").skill__percent
                             span %
                             a.skill__edit-btn
-                              img(src="../images/content/pencil.png").skill__edit-img
+                              .edit-button
                             a.skill__delete-btn
-                              img(src="../images/content/trash.png").skill__delete-img
+                              .delete-button
                         li.skills__item
                           .skill
                             input(type="text" placeholder="Terminal").skill__name
                             input(type="text" placeholder="100").skill__percent
                             span %
                             a.skill__edit-btn
-                              img(src="../images/content/pencil.png").skill__edit-img
+                              .edit-button
                             a.skill__delete-btn
-                              img(src="../images/content/trash.png").skill__delete-img
+                              .delete-button
                         li.skills__item
                           .skill
                             input(type="text" placeholder="Gulp").skill__name
                             input(type="text" placeholder="100").skill__percent
                             span %
                             a.skill__edit-btn
-                              img(src="../images/content/pencil.png").skill__edit-img
+                              .edit-button
                             a.skill__delete-btn
-                              img(src="../images/content/trash.png").skill__delete-img
+                              .delete-button
                         li.skills__item
                           .skill
                             input(type="text" placeholder="Webpack").skill__name
                             input(type="text" placeholder="100").skill__percent
                             span %
                             a.skill__edit-btn
-                              img(src="../images/content/pencil.png").skill__edit-img
+                              .edit-button
                             a.skill__delete-btn
-                              img(src="../images/content/trash.png").skill__delete-img
+                              .delete-button
                   .category-card__footer
                     .new-skill
                       input(type="text" placeholder="Новый навык").new-skill__name
                       input(type="text" placeholder="100").new-skill__percent
                       span %
                       a.new-skill__add-btn
-                        img(src="../images/content/ellipse.png").new-skill__add-img
-    section.works
+                        .add-button
+    section.section.works
       .container.works__container
-        .works__header
+        .section__header
           h2.section-title.works__title Блок «Работы»
         .works__content
           .add-work
             h3.add-work__title Редактирование работы
             form.add-work__form
               .add-work__column-left
-                label.add-work__file
+                label.add-work__label.add-work__label--dwnld-pic
                   input(type="file" style="display: none").input__file
                   p Перетащите или загрузите <br> для загрузки изображения
                   a.add-work__button.add-work__button--bg Загрузить
@@ -169,9 +131,10 @@
                   button(type="reset").add-work__button Отмена
                   button(type="submit").add-work__button.add-work__button--bg Добавить
           ul.works__list
-            li.works__item.works__item--add
-              a.works__item-add-btn
-                .works__item-add-circle
+            li.works__item
+              .add-card
+                a.add-card__btn
+                  .add-card__logo
                 p Добавить <br> работу
             li.works__item
               .work-card
@@ -180,12 +143,14 @@
                 .work-card__content
                   h3.work-card__title Сайт школы образования
                   .work-card__desc  Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                  a.work-card__link http://loftschool.ru
-                  .work-card__btns
-                    a.work-card__btns-edit Править
-                      img(src="../images/content/pencil.png").work-card__btns-edit-img
-                    a.work-card__btns-delete Удалить
-                      img(src="../images/content/cross.png").work-card__btns-delete-img
+                  a.work-card__link.link http://loftschool.ru
+                  .card-btns
+                    a.card-btns__edit Править
+                      .card-btns__edit-btn
+                        .edit-button
+                    a.card-btns__delete Удалить
+                      .card-btns__delete-btn
+                        .delete-button
             li.works__item
               .work-card
                 .work-card__pic
@@ -193,15 +158,17 @@
                 .work-card__content
                   h3.work-card__title Сайт школы образования
                   .work-card__desc  Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                  a.work-card__link http://loftschool.ru
-                  .work-card__btns
-                    a.work-card__btns-edit Править
-                      img(src="../images/content/pencil.png").work-card__btns-edit-img
-                    a.work-card__btns-delete Удалить
-                      img(src="../images/content/cross.png").work-card__btns-delete-img
-    section.reviews
+                  a.work-card__link.link http://loftschool.ru
+                  .card-btns
+                    a.card-btns__edit Править
+                      .card-btns__edit-btn
+                        .edit-button
+                    a.card-btns__delete Удалить
+                      .card-btns__delete-btn
+                        .delete-button
+    section.section.reviews
       .container.reviews__container
-        .reviews__header
+        .section__header
           h2.section-title.reviews__title Блок «Отзывы»
         .reviews__content
           .add-comment
@@ -211,7 +178,7 @@
                 label.add-comment__file
                   input(type="file" style="display: none").input__file
                   img(src="../images/content/cross.png").work-card__btns-delete-img
-                  p Добавить фото
+                  p.link Добавить фото
               .add-comment__column-right
                 .add-comment__row
                   label.add-comment__label
@@ -229,9 +196,10 @@
                     button(type="reset").add-work__button Отмена
                     button(type="submit").add-work__button.add-work__button--bg Добавить
           ul.comments__list
-            li.comments__item.comments__item--add
-              a.comments__item-add-btn
-                .comments__item-add-circle
+            li.comments__item
+              .add-card
+                a.add-card__btn
+                  .add-card__logo
                 p Добавить <br> отзыв
             li.comments__item
               .comment-card
@@ -244,20 +212,16 @@
                     .author__business Основатель Loftschool
                 .comment
                   p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                .work-card__btns
-                  a.work-card__btns-edit Править
-                    img(src="../images/content/pencil.png").work-card__btns-edit-img
-                  a.work-card__btns-delete Удалить
-                    img(src="../images/content/cross.png").work-card__btns-delete-img
+                .card-btns
+                  a.card-btns__edit Править
+                    .card-btns__edit-btn
+                      .edit-button
+                  a.card-btns__delete Удалить
+                    .card-btns__delete-btn
+                      .delete-button
             li.comments__item
               .comment-card
-                            
-
-
-
 </template>
-
-
 <style>
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
   @import "normalize.css";
@@ -271,10 +235,10 @@
   }
 
   .header {
+    padding: 16px 0;
     background-image: linear-gradient(90deg, #3d3d59 0%, #444472 100%);
 
     &__container {
-      padding: 16px 0;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -318,6 +282,7 @@
   }
 
   .avatar {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -345,7 +310,7 @@
       display: block;
       padding: 30px;
       font-size: 16px;
-      color: #383bcf;
+      color: #000;
       font-weight: 600;
     }
 
@@ -354,9 +319,20 @@
     }
   }
 
-  section {
-    margin-top: -2px;
+  .link {
+    font-size: 16px;
+    color: #383bcf;
+    font-weight: 600;
+  }
+
+  .section {
     background: #f7f9fd;
+  }
+
+  .section__header {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
   }
 
   .section-title {
@@ -364,9 +340,63 @@
     color: #414c63;
     font-weight: 700;
   }
+  
+  .add-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #0069ec 0%, #3f34cb 100%);
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 2px; height: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 50%; height: 2px;
+      transform: translate(-50%, -50%);
+      background: #fff;
+    }
+  }
+
+  .confirm-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/content/tick.png') center center no-repeat / contain;
+  }
+
+  .decline-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/content/cross.png') center center no-repeat / contain;
+  }
+
+  .edit-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/content/pencil.png') center center no-repeat / contain;
+  }
+
+  .delete-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/content/trash.png') center center no-repeat / contain;
+  }
 
   .about {
-    min-height: 973px;
+    margin-top: -2px;
     padding-bottom: 32px;
     display: flex;
     
@@ -380,19 +410,10 @@
       margin-right: 60px;
     }
 
-    &__header {
-      padding: 60px 0;
-      display: flex;
-      align-items: center;
-      
-    }
-
     &__link {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
-      font-size: 16px;
-      color: #383bcf;
-      font-weight: 600;
 
       &-logo {
         width: 20px;
@@ -401,16 +422,6 @@
         overflow: hidden;
         position: relative;
         margin-right: 13px;
-
-        &:after {
-          position: absolute;
-          content: "+";
-          left: 50%;
-          top: 50%;
-          color: #fff;
-          font-size: 16px;
-          transform: translate(-50%, -50%);
-        }
       }
     }
 
@@ -558,25 +569,13 @@
       width: 40px;
       height: 40px;
       position: relative;
-
-      &:after {
-        position: absolute;
-        content: "+";
-        left: 50%;
-        top: 50%;
-        color: #fff;
-        font-size: 22px;
-        transform: translate(-50%, -50%);
-      }
+      border-radius: 50%;
+      overflow: hidden;
     }
   }
 
   .works {
-    min-height: 2150px;
-
-    &__header {
-      padding: 60px 0;
-    }
+    padding-bottom: 60px;
   }
 
   .add-work {
@@ -615,6 +614,20 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 30px;
+
+      &--dwnld-pic {
+        justify-content: center;
+        align-items: center;
+        height: 275px;
+        cursor: pointer;
+        background-color: #dee4ed;
+        border: 1px dashed #a1a1a1;
+        margin-bottom: 0;
+
+        p {
+          margin-bottom: 50px;
+        }
+      }
     }
 
     .input__tags, .input__name, .input__url, .input__description {
@@ -629,14 +642,16 @@
       display: flex;
       justify-content: flex-end;
     }
-
+  
     &__button {
         background: transparent;
-        font-size: 18px;
+        font-size: 16px;
+        font-family: "Open Sans";
         font-weight: 700;
-        padding: 30px 50px;
+        padding: 9px 32px;
         border-radius: 40px;
-        color: #000;
+        font-size: 16px;
+        color: #383bcf;
         text-transform: uppercase;
 
         &--bg {
@@ -644,26 +659,9 @@
           color: #fff;
         }
     }
-
-    &__file {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 275px;
-      cursor: pointer;
-      
-      background-color: #dee4ed;
-      border: 1px dashed #a1a1a1;
-
-      p {
-        margin-bottom: 50px;
-      }
-    }
   }
 
   .works__list {
-    height: 1000px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -680,40 +678,53 @@
     &:last-child, &:nth-child(odd) {
       margin-bottom: 0;
     }
+  }
 
-    &--add {
-      background-image: linear-gradient(90deg, #0069ec 0%, #3f34cb 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  .add-card {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #0069ec 0%, #3f34cb 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      color: #ffffff;
+      font-weight: 700;
+      text-align: center;
     }
-  }
+    
 
-  .works__item-add-btn p {
-    font-size: 18px;
-    color: #ffffff;
-    font-family: "Open Sans";
-    font-weight: 700;
-    text-align: center;
-  }
+    &__logo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid white;
+      margin-bottom: 30px;
 
-  .works__item-add-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid white;
-    position: relative;
-    margin-bottom: 30px;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%; top: 50%;
+        width: 2px; height: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+      }
 
-    &:after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 50px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%; top: 50%;
+        width: 50%; height: 2px;
+        transform: translate(-50%, -50%);
+        background: #fff;
+      }
     }
   }
 
@@ -744,10 +755,6 @@
 
     &__link {
       display: block;
-      font-size: 16px;
-      color: #383bcf;
-      font-family: "Open Sans";
-      font-weight: 600;
       margin-bottom: 40px;
     }
 
@@ -755,18 +762,19 @@
       padding: 0 20px;
       flex: 1;
     }
+  }
 
-    &__btns {
+  .card-btns {
+      width: 100%;
       display: flex;
       justify-content: space-between;
-    }
 
-    &__btns-edit, &__btns-delete {
+    &__edit, &__delete {
       display: flex;
       align-items:center;
     }
 
-    &__btns-edit-img, &__btns-delete-img {
+    &__edit-btn, &__delete-btn {
       width: 15px;
       height: 15px;
       margin-left: 10px;
@@ -858,33 +866,6 @@
     }
   }
 
-  .comments__item-add-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid white;
-    position: relative;
-    margin-bottom: 30px;
-
-    &:after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 50px;
-    }
-  }
-
-  .comments__item-add-btn p {
-    font-size: 18px;
-    color: #ffffff;
-    font-family: "Open Sans";
-    font-weight: 700;
-    text-align: center;
-  }
-
   .comment-card {
     height: 100%;
     padding: 30px 20px;
@@ -896,14 +877,16 @@
   .author {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dedee0;
 
     &__avatar {
         flex-shrink: 0;
         width: 75px;
         height: 75px;
-        margin-right: 30px;
+        margin-right: 10px;
     }
 
     &__info {
@@ -914,22 +897,15 @@
 
 
     &__name {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 10px;
+      font-size: 18px;
+      color: #414c63;
+      font-weight: 700;
     }
 
     &__business {
-        font-size: 16px;
-        font-weight: 600;
-        opacity: .4;
+      font-size: 16px;
+      color: #414c63;
+      font-weight: 600;
     }
   }
-
-  .avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-}
 </style>
