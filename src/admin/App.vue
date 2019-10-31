@@ -110,26 +110,31 @@
             h3.add-work__title Редактирование работы
             form.add-work__form
               .add-work__column-left
-                label.add-work__label.add-work__label--dwnld-pic
-                  input(type="file" style="display: none").input__file
+                label.label.label--dwnld-pic
+                  input(type="file" style="display: none" name="work-image" required).input__file
                   p Перетащите или загрузите <br> для загрузки изображения
-                  a.add-work__button.add-work__button--bg Загрузить
+                  a.form-btns__button.form-btns__button--bg Загрузить
               .add-work__column-right
-                label.add-work__label
-                  span Название
-                  input(type="text").input__name
-                label.add-work__label
-                  span Cсылка
-                  input(type="text").input__url
-                label.add-work__label
-                  span Описание
-                  input(type="textarea").input__description
-                label.add-work__label
-                  span Добавление тега
-                  input(type="text").input__tags
-                .add-work__btns
-                  button(type="reset").add-work__button Отмена
-                  button(type="submit").add-work__button.add-work__button--bg Добавить
+                .form-row
+                  label.label
+                    span Название
+                    input(type="text" name="work-name" required).input__name
+                .form-row
+                  label.label
+                    span Cсылка
+                    input(type="text" name="work-link" required).input__url
+                .form-row
+                  label.label
+                    span Описание
+                    input(type="textarea" name="work-description" required).input__description
+                .form-row
+                  label.label
+                    span Добавление тега
+                    input(type="text" name="work-tags" required).input__tags
+                .form-row
+                  .form-btns
+                    button(type="reset").form-btns__button Отмена
+                    button(type="submit").form-btns__button.form-btns__button--bg Добавить
           ul.works__list
             li.works__item
               .add-card
@@ -175,26 +180,25 @@
             h3.add-comment__title Новый отзыв
             form.add-comment__form
               .add-comment__column-left
-                label.add-comment__file
-                  input(type="file" style="display: none").input__file
-                  img(src="../images/content/cross.png").work-card__btns-delete-img
+                label.label.label--dwnld-pic
+                  input(type="file" style="display: none" name="author-photo").input__file
                   p.link Добавить фото
               .add-comment__column-right
-                .add-comment__row
-                  label.add-comment__label
+                .form-row
+                  label.label
                     span Имя автора
-                    input(type="text" placeholder="Дмитрий Ковальчук").input__name
-                  label.add-comment__label
+                    input(type="text" placeholder="Дмитрий Ковальчук" name="author-name" required).input__name
+                  label.label
                     span Титул автора
-                    input(type="text" placeholder="Основатель Loftschool").input__url
-                .add-comment__row
-                  label.add-comment__label
+                    input(type="text" placeholder="Основатель Loftschool" name="author-titul" required).input__url
+                .form-row
+                  label.label
                     span Отзыв
-                    input(type="text" placeholder="Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!").input__url
-                .add-comment__row
-                  .add-work__btns
-                    button(type="reset").add-work__button Отмена
-                    button(type="submit").add-work__button.add-work__button--bg Добавить
+                    input(type="text" name="comment" placeholder="Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!" required).input__url
+                .form-row
+                  .form-btns
+                    button(type="reset").form-btns__button Отмена
+                    button(type="submit").form-btns__button.form-btns__button--bg Добавить
           ul.comments__list
             li.comments__item
               .add-card
@@ -218,7 +222,7 @@
                       .edit-button
                   a.card-btns__delete Удалить
                     .card-btns__delete-btn
-                      .delete-button
+                      .decline-button
             li.comments__item
               .comment-card
 </template>
@@ -609,39 +613,39 @@
       display: flex;
       flex-direction: column;
     }
+  }
 
-    &__label {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 30px;
+  .label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-      &--dwnld-pic {
-        justify-content: center;
-        align-items: center;
-        height: 275px;
-        cursor: pointer;
-        background-color: #dee4ed;
-        border: 1px dashed #a1a1a1;
-        margin-bottom: 0;
+    &--dwnld-pic {
+      justify-content: center;
+      align-items: center;
+      max-height: 275px;
+      cursor: pointer;
+      background-color: #dee4ed;
+      border: 1px dashed #a1a1a1;
+      margin-bottom: 0;
 
-        p {
-          margin-bottom: 50px;
-        }
+      p {
+        margin-bottom: 50px;
       }
     }
+  }
 
-    .input__tags, .input__name, .input__url, .input__description {
-      padding: 10px 30px;
-    }
+  .form-row {
+    display: flex;
+    margin-bottom: 30px;
+      
+  }
 
-    .input__description {
-      min-height: 145px;
-    }
-
-    &__btns {
-      display: flex;
-      justify-content: flex-end;
-    }
+  
+  .form-btns {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   
     &__button {
         background: transparent;
@@ -658,7 +662,17 @@
           background-image: linear-gradient(90deg, #3056e8 0%, #4c87ee 100%);
           color: #fff;
         }
+      }
     }
+
+  
+
+  .input__tags, .input__name, .input__url, .input__description {
+    padding: 10px 0;
+  }
+
+  .input__description {
+    min-height: 145px;
   }
 
   .works__list {
