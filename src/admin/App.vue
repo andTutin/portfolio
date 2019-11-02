@@ -32,75 +32,179 @@
               li.categories__item
                 .category-card
                   .category-card__header
-                    input(type="text" placeholder="Название новой группы").category-card__title
-                    a.category-card__confirm-btn
-                      .confirm-button
-                    a.category-card__decline-btn 
-                      .decline-button
+                    input(type="text" placeholder="Название новой группы" autofocus).category-card__title
+                    .category-card__btns.category-card__btns--mode-create
+                      a.category-card__confirm-btn
+                        .confirm-button
+                      a.category-card__decline-btn 
+                        .decline-button
+                      a.category-card__edit-btn 
+                        .edit-button
                   .category-card__skills
                     .skills
                       ul.skills__list
                   .category-card__footer
                     .new-skill
-                      input(type="text" placeholder="Новый навык").new-skill__name
-                      input(type="text" placeholder="100").new-skill__percent
+                      input(type="text" placeholder="Новый навык" disabled).new-skill__name
+                      input(type="text" placeholder="100" disabled).new-skill__percent
                       span %
-                      a.new-skill__add-btn
+                      button.new-skill__add-btn(disabled)
                         .add-button
               li.categories__item
                 .category-card
                   .category-card__header
                     input(type="text" placeholder="Workflow").category-card__title
-                    a.category-card__confirm-btn
-                      .confirm-button
-                    a.category-card__decline-btn 
-                      .decline-button
+                    .category-card__btns.category-card__btns--mode-edit
+                      a.category-card__confirm-btn
+                        .confirm-button
+                      a.category-card__decline-btn 
+                        .decline-button
+                      a.category-card__edit-btn 
+                        .edit-button
                   .category-card__skills
                     .skills
                       ul.skills__list
                         li.skills__item
                           .skill
-                            input(type="text" placeholder="Git").skill__name
-                            input(type="text" placeholder="100").skill__percent
+                            input(type="text" placeholder="Git" disabled).skill__name
+                            input(type="text" placeholder="100" disabled).skill__percent
                             span %
-                            a.skill__edit-btn
-                              .edit-button
-                            a.skill__delete-btn
-                              .delete-button
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
                         li.skills__item
                           .skill
-                            input(type="text" placeholder="Terminal").skill__name
-                            input(type="text" placeholder="100").skill__percent
+                            input(type="text" placeholder="Terminal" disabled).skill__name
+                            input(type="text" placeholder="100" disabled).skill__percent
                             span %
-                            a.skill__edit-btn
-                              .edit-button
-                            a.skill__delete-btn
-                              .delete-button
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
                         li.skills__item
                           .skill
-                            input(type="text" placeholder="Gulp").skill__name
-                            input(type="text" placeholder="100").skill__percent
+                            input(type="text" placeholder="Gulp" disabled).skill__name
+                            input(type="text" placeholder="100" disabled).skill__percent
                             span %
-                            a.skill__edit-btn
-                              .edit-button
-                            a.skill__delete-btn
-                              .delete-button
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
                         li.skills__item
                           .skill
-                            input(type="text" placeholder="Webpack").skill__name
-                            input(type="text" placeholder="100").skill__percent
+                            input(type="text" placeholder="Webpack" disabled).skill__name
+                            input(type="text" placeholder="100" disabled).skill__percent
                             span %
-                            a.skill__edit-btn
-                              .edit-button
-                            a.skill__delete-btn
-                              .delete-button
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
                   .category-card__footer
                     .new-skill
                       input(type="text" placeholder="Новый навык").new-skill__name
                       input(type="text" placeholder="100").new-skill__percent
                       span %
-                      a.new-skill__add-btn
+                      button.new-skill__add-btn
                         .add-button
+              li.categories__item
+                .category-card
+                  .category-card__header
+                    input(type="text" placeholder="Frontend" disabled).category-card__title
+                    .category-card__btns
+                      a.category-card__confirm-btn
+                        .confirm-button
+                      a.category-card__decline-btn 
+                        .decline-button
+                      a.category-card__edit-btn 
+                        .edit-button
+                  .category-card__skills
+                    .skills
+                      ul.skills__list
+                        li.skills__item
+                          .skill
+                            input(type="text" placeholder="HTML5" disabled).skill__name
+                            input(type="text" placeholder="100" disabled).skill__percent
+                            span %
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
+                        li.skills__item
+                          .skill
+                            input(type="text" placeholder="CSS3").skill__name
+                            input(type="text" placeholder="100").skill__percent
+                            span %
+                            .skill__btns.skill__btns--mode-edit
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
+                        li.skills__item
+                          .skill
+                            input(type="text" placeholder="JavaScript" disabled).skill__name
+                            input(type="text" placeholder="100" disabled).skill__percent
+                            span %
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
+                        li.skills__item
+                          .skill
+                            input(type="text" placeholder="JQuery & Vue.js" disabled).skill__name
+                            input(type="text" placeholder="10" disabled).skill__percent
+                            span %
+                            .skill__btns
+                              a.skill__confirm-btn
+                                .confirm-button
+                              a.skill__edit-btn
+                                .edit-button
+                              a.skill__delete-btn
+                                .delete-button
+                              a.skill__decline-btn
+                                .decline-button
+                  .category-card__footer
+                    .new-skill
+                      input(type="text" placeholder="Новый навык").new-skill__name
+                      input(type="text" placeholder="100").new-skill__percent
+                      span %
+                      button.new-skill__add-btn
+                        .add-button
+
     section.section.works
       .container.works__container
         .section__header
@@ -118,18 +222,18 @@
                 .form-row
                   label.label
                     span Название
-                    input(type="text" name="work-name" required).input__name
+                    input(type="text" name="work-name" placeholder="Дизайн сайта для авто салона Porsche" required).input__name
                 .form-row
                   label.label
                     span Cсылка
-                    input(type="text" name="work-link" required).input__url
+                    input(type="text" name="work-link" placeholder="https://www.porsche-pulkovo.ru" required).input__url
                 .form-row
                   label.label
                     span Описание
-                    input(type="textarea" name="work-description" required).input__description
+                    input(type="textarea" name="work-description" placeholder="" required).input__description
                 .form-row
                   label.label
-                    span Добавление тега
+                    span Добавление тега 
                     input(type="text" name="work-tags" required).input__tags
                 .form-row
                   .form-btns
@@ -138,9 +242,8 @@
           ul.works__list
             li.works__item
               .add-card
-                a.add-card__btn
+                a.add-card__btn Добавить <br> работу
                   .add-card__logo
-                p Добавить <br> работу
             li.works__item
               .work-card
                 .work-card__pic
@@ -202,9 +305,8 @@
           ul.comments__list
             li.comments__item
               .add-card
-                a.add-card__btn
+                a.add-card__btn Добавить <br> отзыв
                   .add-card__logo
-                p Добавить <br> отзыв
             li.comments__item
               .comment-card
                 .author
@@ -478,6 +580,7 @@
       border-bottom: 1px solid #1f232d;
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
 
     &__title {
@@ -488,15 +591,36 @@
       font-weight: 600;
     }
 
-    &__confirm-btn {
-      margin-left: auto;
-      margin-right: 20px;
+    &__btns {
+      width: 50px;
+      display: flex;
+      justify-content: space-between;
+
+      &--mode-create, &--mode-edit {
+
+        .category-card__confirm-btn, .category-card__decline-btn {
+          display: block;
+        }
+
+        .category-card__edit-btn {
+          display: none;
+        }
+      }
     }
 
     &__confirm-btn, &__decline-btn {
+      display: none;
       width: 15px;
       height: 15px;
     }
+
+    &__edit-btn {
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-left: auto;
+    }
+
 
     &__skills {
       flex: 1;
@@ -532,18 +656,35 @@
       border: none;
     }
 
-    span {
-      //margin-right: 100px;
-    }
+    &__btns {
+      margin-left: 60px;
+      width: 50px;
+      display: flex;
+      justify-content: space-between;
 
-    &__edit-btn {
-      margin-left: 62px;
-      margin-right: 20px;
+      &--mode-edit {
+
+        .skill__confirm-btn, .skill__decline-btn {
+          display: block;
+        }
+
+        .skill__edit-btn, .skill__delete-btn {
+          display: none;
+        }
+      }
     }
 
     &__edit-btn, &__delete-btn {
-      width: 15px;
-      height: 15px;
+          display: block;
+    }
+
+    &__confirm-btn, &__decline-btn {
+        display: none;
+    }
+
+    &__edit-btn, &__delete-btn, &__confirm-btn, &__decline-btn {
+        width: 15px;
+        height: 15px;
     }
   }
 
@@ -570,9 +711,9 @@
     }
 
     &__add-btn {
+      padding: 0;
       width: 40px;
       height: 40px;
-      position: relative;
       border-radius: 50%;
       overflow: hidden;
     }
@@ -698,20 +839,21 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(90deg, #0069ec 0%, #3f34cb 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    p {
+    &__btn {
+      width: 100%;
+      height: 100%;
       font-size: 18px;
       line-height: 30px;
       color: #ffffff;
       font-weight: 700;
       text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
     }
     
-
     &__logo {
       display: block;
       width: 150px;
@@ -921,5 +1063,14 @@
       color: #414c63;
       font-weight: 600;
     }
+  }
+
+  input[disabled] {
+    background: transparent;
+  }
+
+  button[disabled] {
+    opacity: .5;
+    cursor: initial;
   }
 </style>
