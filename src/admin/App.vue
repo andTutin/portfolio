@@ -31,178 +31,178 @@
             ul.categories__list
               li.categories__item
                 .category-card
-                  .category-card__header
+                  form.category-card__header
                     input(type="text" placeholder="Название новой группы" autofocus).category-card__title
                     .category-card__btns.category-card__btns--mode-create
-                      a.category-card__confirm-btn
+                      button(type="submit").category-card__confirm-btn
                         .confirm-button
-                      a.category-card__decline-btn 
+                      button(type="reset").category-card__decline-btn 
                         .decline-button
-                      a.category-card__edit-btn 
+                      button.category-card__edit-btn 
                         .edit-button
                   .category-card__skills
                     .skills
                       ul.skills__list
                   .category-card__footer
-                    .new-skill
+                    form.new-skill
                       input(type="text" placeholder="Новый навык" disabled).new-skill__name
                       input(type="text" placeholder="100" disabled).new-skill__percent
                       span %
-                      button.new-skill__add-btn(disabled)
+                      button(type="submit" disabled).new-skill__add-btn
                         .add-button
               li.categories__item
                 .category-card
-                  .category-card__header
+                  form.category-card__header
                     input(type="text" placeholder="Workflow").category-card__title
                     .category-card__btns.category-card__btns--mode-edit
-                      a.category-card__confirm-btn
+                      button(type="submit").category-card__confirm-btn
                         .confirm-button
-                      a.category-card__decline-btn 
+                      button(type="reset").category-card__decline-btn 
                         .decline-button
-                      a.category-card__edit-btn 
+                      button.category-card__edit-btn 
                         .edit-button
                   .category-card__skills
                     .skills
                       ul.skills__list
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="Git" disabled).skill__name
                             input(type="text" placeholder="100" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="Terminal" disabled).skill__name
                             input(type="text" placeholder="100" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="Gulp" disabled).skill__name
                             input(type="text" placeholder="100" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="Webpack" disabled).skill__name
                             input(type="text" placeholder="100" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                   .category-card__footer
-                    .new-skill
+                    form.new-skill
                       input(type="text" placeholder="Новый навык").new-skill__name
                       input(type="text" placeholder="100").new-skill__percent
                       span %
-                      button.new-skill__add-btn
+                      button(type="submit").new-skill__add-btn
                         .add-button
               li.categories__item
                 .category-card
-                  .category-card__header
-                    input(type="text" placeholder="Frontend" disabled).category-card__title
+                  form.category-card__header
+                    input(type="text" placeholder="Workflow").category-card__title
                     .category-card__btns
-                      a.category-card__confirm-btn
+                      button(type="submit").category-card__confirm-btn
                         .confirm-button
-                      a.category-card__decline-btn 
+                      button(type="reset").category-card__decline-btn 
                         .decline-button
-                      a.category-card__edit-btn 
+                      button.category-card__edit-btn 
                         .edit-button
                   .category-card__skills
                     .skills
                       ul.skills__list
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="HTML5" disabled).skill__name
                             input(type="text" placeholder="100" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="CSS3").skill__name
                             input(type="text" placeholder="100").skill__percent
                             span %
                             .skill__btns.skill__btns--mode-edit
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="JavaScript" disabled).skill__name
                             input(type="text" placeholder="100" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                         li.skills__item
-                          .skill
+                          form.skill
                             input(type="text" placeholder="JQuery & Vue.js" disabled).skill__name
                             input(type="text" placeholder="10" disabled).skill__percent
                             span %
                             .skill__btns
-                              a.skill__confirm-btn
+                              button(type="submit").skill__confirm-btn
                                 .confirm-button
-                              a.skill__edit-btn
+                              button.skill__edit-btn
                                 .edit-button
-                              a.skill__delete-btn
+                              button.skill__delete-btn
                                 .delete-button
-                              a.skill__decline-btn
+                              button(type="reset").skill__decline-btn
                                 .decline-button
                   .category-card__footer
-                    .new-skill
+                    form.new-skill
                       input(type="text" placeholder="Новый навык").new-skill__name
                       input(type="text" placeholder="100").new-skill__percent
                       span %
-                      button.new-skill__add-btn
+                      button(type="submit").new-skill__add-btn
                         .add-button
 
     section.section.works
@@ -1072,5 +1072,10 @@
   button[disabled] {
     opacity: .5;
     cursor: initial;
+  }
+
+  button {
+    padding: 0;
+    background: transparent;
   }
 </style>
